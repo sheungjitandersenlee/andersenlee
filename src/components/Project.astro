@@ -8,7 +8,7 @@
 // Page JSON (src/data/pages/<slug>.json):
 // {
 //   "title", "theme", "heading", "date", "back", "size"?: "large", "spacing"?: "even",
-//   "intro":    { "img"|"video"?, "alt"?, "ar"?, "html", "rows"? },
+//   "intro":    { "img"|"video"?, "alt"?, "ar"?, "html", "rows"?, "cols"? },
 //   "sections": [ { "close"?, "label"?, "html"?, "cols"?, "rows"?: [ [ { "img"|"video", "alt"?, "ar", "box"?, "crop"?, "auto"? }, ... ] ] } ]
 // }
 //
@@ -54,7 +54,7 @@ const sectionStyle = (rows: any[][] = [], cols?: number) => {
           <div class="project__text project__intro-text" set:html={intro.html} />
         </div>
         {intro.rows?.length > 0 && (
-          <div class="project__rows" style={sectionStyle(intro.rows)}>
+          <div class="project__rows" style={sectionStyle(intro.rows, intro.cols)}>
             {intro.rows.map((row: any[]) => (
               <div class="project__row" style={rowStyle(row)}>
                 {row.map((item) => <Media item={item} class="project__item" />)}

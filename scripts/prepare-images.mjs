@@ -17,6 +17,9 @@
 //     "pad": true instead pads a white-background image out to that aspect
 //     ratio, so drawings and screenshots become that shape without losing
 //     any of the picture.
+//   - optional "tight": true on a white-background image drops the white
+//     margin on its left and right (top and bottom keep it), so the gaps
+//     between it and its neighbours in a row are just the 15px row gap.
 // Originals are never changed. Run scripts/aspect.mjs afterwards.
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 'node:fs';
 import { join, basename, extname } from 'node:path';
@@ -60,7 +63,7 @@ async function cropTo(input, { ar, focus = [0.5, 0.5] }) {
   return sharp(input).extract({ left, top, width: w, height: h }).toBuffer();
 }
 
-async function makeWebCopy(src, dest, crop) {
+async function makeWebCopy(src, dest, crop, tight) {
   let input = await sharp(src).rotate().toBuffer();       // apply EXIF rotation
   if (crop && !crop.pad) input = await cropTo(input, crop);
   const white = await hasWhiteEdge(input);
@@ -70,7 +73,7 @@ async function makeWebCopy(src, dest, crop) {
       .toBuffer({ resolveWithObject: true });
     const { width: tw, height: th } = t.info;
     let m = Math.round((MARGIN * th) / (1 - 2 * MARGIN));
-    let ext = { top: m, bottom: m, left: m, right: m };
+    let ext = { top: m, bottom: m, left: tight ? 0 : m, right: tight ? 0 : m };
     if (crop?.pad) {
       // smallest box of the target shape that holds the picture plus margin
       const H = Math.max(th, tw / crop.ar) / (1 - 2 * MARGIN), W = H * crop.ar;
@@ -102,8 +105,8 @@ async function visit(node) {
     } else {
       // cropped copies get their own name so the same photo can appear uncropped elsewhere
       const tag = node.crop ? `-${node.crop.pad ? 'pad' : 'crop'}${node.crop.ar}-${node.crop.focus?.join('-') ?? 'c'}` : '';
-      const name = basename(decodeURI(source), extname(source)) + tag + '.webp';
-      (await makeWebCopy(file, join(OUT, name), node.crop)) ? stats.white++ : stats.other++;
+      const name = basename(decodeURI(source), extname(source)) + tag + (node.tight ? '-tight' : '') + '.webp';
+      (await makeWebCopy(file, join(OUT, name), node.crop, node.tight)) ? stats.white++ : stats.other++;
       node.source = source;
       node.img = `/images/web/${name}`;
     }

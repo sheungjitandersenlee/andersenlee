@@ -66,8 +66,7 @@
             "crop": {
               "ar": 1,
               "pad": true
-            },
-            "box": 1
+            }
           },
           {
             "img": "/images/web/Screenshot-2026-01-09-165944-pad1-c.webp",
@@ -77,8 +76,7 @@
             "crop": {
               "ar": 1,
               "pad": true
-            },
-            "box": 1
+            }
           }
         ],
         [

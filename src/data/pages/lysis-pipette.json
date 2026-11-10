@@ -220,10 +220,18 @@
             "source": "/images/full/IMG_0021-scaled.jpg"
           },
           {
-            "img": "/images/web/Screenshot-2026-04-03-154201-e1775245401472.webp",
+            "img": "/images/web/Screenshot-2026-04-03-154201-e1775245401472-tight.webp",
             "alt": "Screenshot 2026-04-03 154201",
-            "ar": 0.481,
-            "source": "/images/full/Screenshot-2026-04-03-154201-e1775245401472.png"
+            "ar": 0.362,
+            "source": "/images/full/Screenshot-2026-04-03-154201-e1775245401472.png",
+            "tight": true
+          },
+          {
+            "img": "/images/web/back-e1775245641749-tight.webp",
+            "alt": "back",
+            "ar": 0.369,
+            "source": "/images/full/back-e1775245641749.png",
+            "tight": true
           }
         ]
       ]
@@ -232,12 +240,6 @@
       "close": true,
       "rows": [
         [
-          {
-            "img": "/images/web/back-e1775245641749.webp",
-            "alt": "back",
-            "ar": 0.489,
-            "source": "/images/full/back-e1775245641749.png"
-          },
           {
             "img": "/images/web/Screenshot-2026-04-03-155209.webp",
             "alt": "Screenshot 2026-04-03 155209",

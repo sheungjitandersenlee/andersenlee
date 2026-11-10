@@ -4,11 +4,11 @@
   "heading": "mp3 player prototype",
   "date": "march 2026 – april 2026",
   "back": "/projects/",
+  "size": "xl",
   "intro": {
     "img": "/images/web/IMG_2557-scaled-crop1-0.5-0.55.webp",
     "alt": "IMG_2557",
     "ar": 1,
-    "html": "<p>The goal was to build a small music player from scratch. Breadboard prototype as a working proof of concept, with a custom PCBA designed for the next iteration.</p><p>&gt;&nbsp;Built a handheld MP3 player from scratch on breadboard, integrating an ESP32, PCM5102A DAC over I2S, eInk display, microSD card, and LiPo power system into a 3d-printed enclosure.</p><p>&gt; Diagnosed and resolved a silent I2S audio failure caused by a version conflict between the ESP32 Arduino core v3.x and the audio library; fix required rolling back to core 2.0.17.</p><p>&gt; Implemented a four-screen firmware state machine in C++ for playback, library browsing, and settings, with MP3 decoding running fully in software on the ESP32.</p>",
     "source": "/images/full/IMG_2557-scaled.jpg",
     "crop": {
       "ar": 1,
@@ -16,49 +16,139 @@
         0.5,
         0.55
       ]
-    }
+    },
+    "html": "<p>a handheld mp3 player built from scratch: circuit, firmware, and enclosure. this is the breadboard proof of concept. a custom pcba is next.</p><p class=\"break\">final spec:</p><p>&gt; mp3 playback from microsd<br>&gt; a dedicated i2s dac for audio out<br>&gt; an eink display for track info and menus<br>&gt; 5 buttons and a rotary encoder for navigation<br>&gt; a usb-c rechargeable lipo<br>&gt; all in a 3d printed enclosure</p>",
+    "rows": [
+      [
+        {
+          "img": "/images/web/render.webp",
+          "alt": "",
+          "ar": 1.341,
+          "source": "/images/full/render.png",
+          "box": 1.5
+        },
+        {
+          "img": "/images/web/render2.webp",
+          "alt": "",
+          "ar": 2.011,
+          "source": "/images/full/render2.png",
+          "box": 1.5
+        }
+      ]
+    ],
+    "cols": 6
   },
   "sections": [
     {
-      "label": "Circuit Layout",
-      "html": "<p>All components connect back to the ESP32, which acts as the brain. The key connections are:</p><p>&gt; Audio (I2S): BCK → GPIO22, LRCK → GPIO21, DIN → GPIO27</p><p>&gt; Display (SPI): MOSI → GPIO19, SCK → GPIO18, CS → GPIO5, DC → GPIO4, RST → GPIO16, BUSY → GPIO2</p><p>&gt; SD Card (SPI): Shares MOSI/SCK with display, separate CS pin → GPIO23</p><p>&gt; Buttons: GPIO34, 35, 36, 39 (with external 10kΩ pull-up resistors to 3.3V)</p><p>&gt; Scroll Wheel: Rotary encoder on two GPIO pins</p>",
+      "label": "scope",
+      "html": "<p>the original list also had bluetooth out, line-in recording, and a speaker amp. i cut all three early. each one added a radio, an adc path, or another power stage to debug, and none of them was core to playing music. cutting them made everything that was left more reliable.</p>"
+    },
+    {
+      "label": "architecture",
+      "html": "<p>the esp32 runs everything. i picked it for its hardware i2s peripheral and because it’s fast enough to decode mp3 in software, so there’s no dedicated decoder chip.</p><p>&gt; audio: the pcm5102a dac takes i2s from the esp32 (bck gpio22, lrck gpio21, din gpio27) and outputs line level stereo.</p><p>&gt; display: a waveshare 2.13\" eink (250x122, spi). i chose eink for power. it draws almost nothing once an image is on screen, so track info can stay up for hours.</p><p>&gt; storage: a microsd module on the same spi bus as the display, with separate chip selects (display cs gpio5, sd cs gpio23).</p><p>&gt; input: 5 tactile buttons for play/pause, skip, back, menu, and select, plus a rotary encoder for scrolling. the buttons sit on gpio34 to 39, which are input only and have no internal pull-ups, so each one gets an external 10k pull-up to 3.3v.</p><p>&gt; power: a tp4056 handles usb-c lipo charging. an mcp1700 ldo steps the battery’s 3.0 to 4.2v down to 3.3v.</p>"
+    },
+    {
+      "label": "firmware",
+      "html": "<p>c++ on the arduino esp32 framework. it’s a state machine with four screens:</p><p>&gt; now playing: track, artist, progress<br>&gt; library: a scrollable list from the sd card<br>&gt; menu<br>&gt; settings: volume, display options</p><p>mp3 decoding runs entirely in software on the esp32’s dual core processor through the esp32-audioI2S library.</p>"
+    },
+    {
+      "label": "problems",
+      "html": "<p>&gt; regulator dropout. my first regulator was an ams1117-3.3, which needs ~1v of headroom. that means 4.3v in for 3.3v out, more than a lipo gives for most of its discharge, so the device would have browned out with over half the battery left. i swapped to an mcp1700 with 178 mv dropout. it holds regulation down to ~3.48v and covers almost the whole usable lipo range. during the swap a wiring error put the battery straight across the circuit and killed the first mcp1700. now i check polarity before a battery goes anywhere near the board.</p>",
       "rows": [
         [
           {
-            "img": "/images/web/IMG_2307-scaled.webp",
-            "alt": "IMG_2307",
-            "ar": 0.75,
-            "source": "/images/full/IMG_2307-scaled.jpg"
-          },
-          {
             "img": "/images/web/IMG_2301-scaled.webp",
-            "alt": "IMG_2301",
+            "alt": "",
             "ar": 0.75,
             "source": "/images/full/IMG_2301-scaled.jpg"
-          },
-          {
-            "img": "/images/web/IMG_2312-scaled.webp",
-            "alt": "IMG_2312",
-            "ar": 0.75,
-            "source": "/images/full/IMG_2312-scaled.jpg"
           }
         ]
       ]
     },
     {
-      "label": "Firmware",
-      "html": "<p>The firmware was written in Cpp using the Arduino framework for ESP32. It implements a state machine with four screens:</p><p>&gt; Now Playing: shows track name, artist, playback progress<br>&gt; Library: scrollable list of songs on the SD card<br>&gt; Menu: settings and options<br>&gt; Settings: volume, display brightness, etc.</p><p>MP3 decoding uses the ESP32-audioI2S library, which runs the decode entirely in software on the ESP32's dual-core processor.</p>",
+      "close": true,
+      "html": "<p>&gt; boot failures. i had put sd mosi on gpio12. that’s a strapping pin the esp32 reads at reset to set its flash voltage, so whenever the spi line pulled it high, boot failed at random. moving mosi to gpio23, which has no boot function, fixed it.</p><p>&gt; sd module voltage. the first sd breakout had its own ams1117 onboard and expected 5v, so on the 3.3v rail it did nothing. i ran it from the 5v usb pin to keep testing, then switched to a 3.3v native module for the final build. that also removed a pointless regulator from a battery device.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_2307-scaled.webp",
+            "alt": "",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2307-scaled.jpg"
+          }
+        ]
+      ]
+    },
+    {
+      "close": true,
+      "html": "<p>&gt; app size. the decoder library plus the display and sd code didn’t fit in the default partition. switching to the huge app partition scheme (3mb app, no ota) solved it.</p>"
+    },
+    {
+      "label": "the dac problem",
+      "html": "<p>the hardest bug in the project. with the dac wired and the i2s code running, there was no sound, and even a plain 1 khz test tone came out silent. the analog side was alive: touching din to ground made a pop in the headphones. so the dac was powered and listening but never got usable audio.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_2312-scaled.webp",
+            "alt": "",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2312-scaled.jpg"
+          },
+          {
+            "img": "/images/web/IMG_2552-scaled.webp",
+            "alt": "",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2552-scaled.jpg"
+          }
+        ]
+      ]
+    },
+    {
+      "close": true,
+      "html": "<p>i probed bck, lrck, and din on a scope. all three had clean signals at sensible frequencies and logic levels. that ruled out wiring and a dead i2s peripheral, and it made the problem harder because the hardware looked correct.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_2530.webp",
+            "alt": "",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2530.jpg"
+          }
+        ]
+      ]
+    },
+    {
+      "close": true,
+      "html": "<p>the root cause was in software. esp32 arduino core 3.x rewrote the i2s driver, and the audio library hadn’t caught up. the driver started without errors and the clocks ran, but the data frames were wrong, so the dac received garbage and output nothing. rolling back to core 2.0.17, which uses the legacy driver/i2s.h the library was written against, fixed it with no code changes. sound came out on the first try.</p><p>the lesson: a dependency conflict fails quietly. everything initializes, every signal looks right, and nothing works. now when something should work and doesn’t, i check version numbers before i touch hardware.</p>"
+    },
+    {
+      "label": "audio output",
+      "html": "<p>the pcm5102a outputs line level, ~2 vpp. that drives powered speakers fine, but its output impedance is too high to properly drive earbuds. a headphone amp stage between the dac and the jack fixes that and is part of the pcba plan.</p>",
       "rows": [
         [
           {
             "img": "/images/web/IMG_2543-scaled.webp",
-            "alt": "IMG_2543",
+            "alt": "",
             "ar": 0.75,
             "source": "/images/full/IMG_2543-scaled.jpg"
+          }
+        ]
+      ]
+    },
+    {
+      "label": "prototype",
+      "html": "<p>i tested each subsystem on its own before integration: power, sd, dac, display, then inputs. when five things fail at once you can’t tell which one is broken, so i only connected the next block after the current one worked.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_2316-scaled.webp",
+            "alt": "",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2316-scaled.jpg"
           },
           {
             "img": "/images/web/IMG_2451-scaled.webp",
-            "alt": "IMG_2451",
+            "alt": "",
             "ar": 0.75,
             "source": "/images/full/IMG_2451-scaled.jpg"
           }
@@ -66,19 +156,15 @@
       ]
     },
     {
+      "label": "build",
+      "html": "<p>the breadboard circuit sits in a 3d printed enclosure. the encoder knob and buttons are on the top face, the eink display sits in a recessed window, and usb-c charging comes out the side.</p>",
       "rows": [
         [
           {
-            "img": "/images/web/IMG_2552-scaled.webp",
-            "alt": "IMG_2552",
+            "img": "/images/web/IMG_2557-scaled.webp",
+            "alt": "",
             "ar": 0.75,
-            "source": "/images/full/IMG_2552-scaled.jpg"
-          },
-          {
-            "img": "/images/web/IMG_2316-scaled.webp",
-            "alt": "IMG_2316",
-            "ar": 0.75,
-            "source": "/images/full/IMG_2316-scaled.jpg"
+            "source": "/images/full/IMG_2557-scaled.jpg"
           },
           {
             "video": "/images/IMG_2544.mov",
@@ -87,6 +173,10 @@
           }
         ]
       ]
+    },
+    {
+      "label": "next",
+      "html": "<p>&gt; custom pcba to replace the breadboard and shrink the enclosure</p><p>&gt; a headphone amp stage</p><p>&gt; partial refresh on the eink with a dirty flag redraw. right now a full refresh takes ~2 s and blocks input, so button presses during a redraw get dropped.</p><p>&gt; fix the library scroll position resetting</p>"
     }
   ]
 }

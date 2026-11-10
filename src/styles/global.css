@@ -234,7 +234,10 @@ img, video { display: block; max-width: 100%; }
   padding: 92px 60px 50px var(--gutter-left);
 }
 .portfolio__card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
-.portfolio__label { display: block; margin-top: 9px; line-height: var(--lh); }
+.portfolio__label { display: block; margin-top: 9px; line-height: var(--lh); transition: opacity 0.2s; }
+/* hovering a card fades only its title, never the image */
+.portfolio__card:hover { opacity: 1; }
+.portfolio__card:hover .portfolio__label { opacity: 0.75; }
 @media (max-width: 1024px) {
   .portfolio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -286,6 +289,8 @@ img, video { display: block; max-width: 100%; }
 /* text */
 .project__text { max-width: var(--text-max); line-height: var(--lh); }
 .project__text p + p { margin-top: var(--para-gap, var(--s-xs)); }
+/* <p class="break">: a bigger gap above a paragraph, to separate groups of text */
+.project__text p.break { margin-top: var(--s-s); }
 .project__label { color: var(--text-muted); }
 
 /* intro: hero in columns 1-2, text right beside it in columns 3-8
