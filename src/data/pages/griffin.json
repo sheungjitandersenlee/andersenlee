@@ -1,0 +1,79 @@
+{
+  "title": "Griffin",
+  "theme": "light",
+  "heading": "griffin",
+  "date": "oct 2025 – dec 2025",
+  "back": "/projects/",
+  "intro": {
+    "img": "/images/web/IMG_0467-crop1-0.5-0.5.webp",
+    "alt": "IMG_0467",
+    "ar": 1,
+    "html": "<p>* note: this project is ongoing as freelance design work</p><p>the griffin is a automated blood sample pathogen detection platform.</p><p>&gt; designing the enclosure for the griffin with internal airflow channels and vent placement to guide cooling air across electronics and peltier thermal subsystems.&nbsp;</p><p>&gt;&nbsp;optimized the housing for mass production using injection molding: added draft, consistent wall thickness, and mold-friendly split lines while keeping a clean exterior form.</p><p>&gt; incorporated snap-fits and minimal fasteners to simplify assembly and service, reducing part count and assembly steps for scalable manufacturing.</p>",
+    "source": "/images/full/IMG_0467.png",
+    "crop": {
+      "ar": 1,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "sections": [
+    {
+      "rows": [
+        [
+          {
+            "img": "/images/web/Stewie.webp",
+            "alt": "",
+            "ar": 1,
+            "source": "/images/full/Stewie.png"
+          },
+          {
+            "img": "/images/web/Stewie5.webp",
+            "alt": "",
+            "ar": 1,
+            "source": "/images/full/Stewie5.png"
+          }
+        ],
+        [
+          {
+            "img": "/images/web/Stewie2.webp",
+            "alt": "",
+            "ar": 1,
+            "source": "/images/full/Stewie2.png"
+          },
+          {
+            "img": "/images/web/Stewie4.webp",
+            "alt": "",
+            "ar": 1,
+            "source": "/images/full/Stewie4.png"
+          }
+        ]
+      ]
+    },
+    {
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_1144-scaled.webp",
+            "alt": "",
+            "ar": 1.321,
+            "source": "/images/full/IMG_1144-scaled.jpg"
+          },
+          {
+            "img": "/images/web/IMG_1145-scaled.webp",
+            "alt": "",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1145-scaled.jpg"
+          },
+          {
+            "img": "/images/web/IMG_1143-scaled.webp",
+            "alt": "",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1143-scaled.jpg"
+          }
+        ]
+      ]
+    }
+  ]
+}

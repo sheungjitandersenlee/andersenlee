@@ -1,0 +1,86 @@
+{
+  "title": "Torque Tester",
+  "theme": "light",
+  "heading": "humanoid finger torque tester v3",
+  "date": "february 2025 > may 2025",
+  "back": "/projects/",
+  "intro": {
+    "img": "/images/web/TorqueTest-scaled-crop1-0.5-0.53.webp",
+    "alt": "TorqueTest",
+    "ar": 1,
+    "html": "<p>Designed and assembled a modular mechanical test rig to measure torque transmission efficiency in tendon-driven robotic fingers.</p>",
+    "source": "/images/full/TorqueTest-scaled.jpg",
+    "crop": {
+      "ar": 1,
+      "focus": [
+        0.5,
+        0.53
+      ]
+    }
+  },
+  "sections": [
+    {
+      "html": "<p>&gt; Designed a modular system supporting MG90 servos and GL40 motors, measuring with a hx711 load cell and tendon-actuated finger.</p><p>&gt; Identified torque loss primarily from tendon routing friction and angular misalignment between pulley and joint axes.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/TorqueTestJig_Servos-1.webp",
+            "alt": "TorqueTestJig_Servos",
+            "ar": 1,
+            "source": "/images/full/TorqueTestJig_Servos-1.png"
+          },
+          {
+            "img": "/images/web/TorqueTestJig_Gimbal-1.webp",
+            "alt": "TorqueTestJig_Gimbal",
+            "ar": 1,
+            "source": "/images/full/TorqueTestJig_Gimbal-1.png"
+          }
+        ]
+      ]
+    },
+    {
+      "html": "<p>&gt; Tested &gt;3 finger geometries to evaluate joint stiffness, tendon routing, and mechanical advantage under load.</p><p>&gt; Measured average fingertip torque of 0.09 N·m.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/Screenshot-2025-10-15-214726.webp",
+            "alt": "Screenshot 2025-10-15 214726",
+            "ar": 0.835,
+            "source": "/images/full/Screenshot-2025-10-15-214726.png"
+          },
+          {
+            "img": "/images/web/Screenshot-2025-10-15-214304.webp",
+            "alt": "Screenshot 2025-10-15 214304",
+            "ar": 0.667,
+            "source": "/images/full/Screenshot-2025-10-15-214304.png"
+          },
+          {
+            "img": "/images/web/b801db91b1370a3169c6894508a1e138c578bd65.webp",
+            "alt": "b801db91b1370a3169c6894508a1e138c578bd65",
+            "ar": 0.745,
+            "source": "/images/full/b801db91b1370a3169c6894508a1e138c578bd65.png"
+          }
+        ]
+      ]
+    },
+    {
+      "html": "<p>&gt; Integrated HX711 load cell with custom mounting to measure fingertip forces; streamed data to MATLAB for visualization and analysis, identifying 0.09 N·m peak torque loss from tendon friction, compliance and pulley joint axis misalignment.</p><p>&gt; v3 fixes the noticeble flex from the servo mounts when actuated.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/Screenshot-2026-03-12-040422.webp",
+            "alt": "Screenshot 2026-03-12 040422",
+            "ar": 1.312,
+            "source": "/images/full/Screenshot-2026-03-12-040422.png"
+          },
+          {
+            "video": "/images/VID_20250418_223329.mp4",
+            "ar": 2.225,
+            "auto": false,
+            "box": 1.312
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+---
+// One template for every project and experience page.
+// Content lives in src/data/pages/<slug>.json. Add a JSON file there to add a page;
+// the format is described at the top of src/components/Project.astro.
+import Base from '../layouts/Base.astro';
+import Project from '../components/Project.astro';
+
+export function getStaticPaths() {
+  const files = import.meta.glob('../data/pages/*.json', { eager: true });
+  return Object.entries(files).map(([path, mod]: [string, any]) => ({
+    params: { slug: path.split('/').pop()!.replace('.json', '') },
+    props: { page: mod.default },
+  }));
+}
+
+const { page } = Astro.props;
+---
+<Base theme={page.theme} title={page.title}>
+  <Project page={page} />
+</Base>

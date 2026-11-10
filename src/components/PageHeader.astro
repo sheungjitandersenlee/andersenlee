@@ -1,0 +1,23 @@
+---
+// Top-left title is a path: andersen lee/projects/humanoid hand.
+// Project pages (back link to /projects/) sit under "projects"; experience,
+// about and other pages sit straight under "andersen lee". Every part but
+// the last links to its page.
+interface Props {
+  title: string;
+  back: string;
+  date?: string;
+}
+const { title, back, date } = Astro.props;
+const trail = [
+  { label: 'andersen lee', href: '/' },
+  ...(back === '/projects/' ? [{ label: 'projects', href: '/projects/' }] : []),
+];
+---
+<header class="page-header">
+  <div class="page-header__row">
+    <h1>{trail.map((t) => <><a href={t.href}>{t.label}</a>/</>)}{title}</h1>
+    <a class="page-header__back" href={back}>(&lt; back)</a>
+  </div>
+  {date && <p class="page-header__date">{date}</p>}
+</header>

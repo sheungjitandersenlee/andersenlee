@@ -1,0 +1,19 @@
+---
+// One image or video, sized by its real aspect ratio (never stretched).
+// Optional "box": lay the item out as a box of that aspect ratio and centre
+// the image inside it (for white-background images, where the extra white
+// around the picture is invisible on the page).
+interface Props {
+  item: { img?: string; video?: string; alt?: string; ar: number; box?: number; auto?: boolean };
+  class?: string;
+}
+const { item, class: cls = '' } = Astro.props;
+const fit = item.box ? ' media--contain' : '';
+---
+<figure class={`media${fit} ${cls}`} style={`--ar:${item.box ?? item.ar}`}>
+  {item.video
+    ? item.auto
+      ? <video src={item.video} autoplay muted loop playsinline preload="metadata" />
+      : <video src={item.video} controls playsinline preload="metadata" />
+    : <img src={item.img} alt={item.alt ?? ''} loading="lazy" decoding="async" />}
+</figure>

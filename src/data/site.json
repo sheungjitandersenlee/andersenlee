@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "siteName": "Andersen Lee",
+    "title": "Andersen Lee, Mechanical Design Engineer",
+    "description": "Andersen Lee, Systems Design Engineering at UWaterloo. Building Robots in San Francisco, Summer 2026.",
+    "url": "https://www.andersenlee.ca",
+    "ogImage": "/images/andersen-test2.png",
+    "favicon": "/images/de0cnlq-6fe14686-dfce-4643-bbea-7cdfa2b586a8.png",
+    "favicon32": "/images/de0cnlq-6fe14686-dfce-4643-bbea-7cdfa2b586a8-150x150.png"
+  },
+  "home": {
+    "background": {
+      "desktop": "/images/club_night_1982.76.1-2048x1653.jpg",
+      "mobile": "/images/club_night_1982.76.1-1024x827.jpg"
+    },
+    "identity": [
+      "Andersen Lee",
+      "Systems Design Engineering",
+      "Physical and Mechatronics Systems Specialization",
+      "University of Waterloo"
+    ],
+    "experience": [
+      {
+        "name": "UW Reality Labs",
+        "dates": "2024 >",
+        "href": "/uw-reality-labs/"
+      },
+      {
+        "name": "Neuralink",
+        "dates": "2026 > 2026",
+        "href": "/neuralink/"
+      },
+      {
+        "name": "Triton Genomics",
+        "dates": "2025 > 2025",
+        "href": "/kraken-sense/"
+      }
+    ],
+    "links": [
+      { "label": "About Me",  "href": "/aboutme/" },
+      { "label": "Portfolio", "href": "/projects/" },
+      { "label": "LinkedIn",  "href": "http://www.linkedin.com/in/cars2fan", "external": true },
+      { "label": "Twitter",   "href": "https://x.com/lasagnaenjoyer2",       "external": true },
+      { "label": "Email",     "href": "mailto:a237lee@uwaterloo.ca" }
+    ],
+    "caption": "\u201cClub Night\u201d, George Bellows, 1907"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      "i'm a systems design engineering student, interested in microfluidics, robotic systems, structures, and product design.",
+      "i like to build robots, play football, clone plants, and watch movies."
+    ],
+    "images": [
+      {
+        "img": "/images/Chelsea-refb6188ja3jqz0nujc9ulhxoqeze2e0ihy1nl87d8.jpg",
+        "alt": "Chelsea"
+      },
+      {
+        "img": "/images/IMG_7582-scaled-refb53e1p8t850dtc4ppcu1cav1roynodugkdmmdl8.jpeg",
+        "alt": ""
+      },
+      {
+        "img": "/images/IMG_0804-refcs2rgjzjyo4phx4jxbg7m8abxp7tbhs6fhp6158.jpeg",
+        "alt": ""
+      },
+      {
+        "img": "/images/ab67616d0000b273419cedff7b313b962a93932e.jpeg",
+        "alt": ""
+      },
+      {
+        "img": "/images/IMG_2695-refb5wj1l3x44x7hlzb504ompt25bkvctuom97f68c.jpeg",
+        "alt": ""
+      },
+      {
+        "img": "/images/IMG_2176-refb5csfll63d405t8rz1rny8prftxozr4zf6e8fv0.jpeg",
+        "alt": ""
+      },
+      {
+        "img": "/images/IMG_3664-refb3w5gyv61ay4mcm0v64y4z4yvuvw0vwg8awehjg.jpeg",
+        "alt": ""
+      },
+      {
+        "img": "/images/IMG_2152-refbfyewoboiasltwtqi63d3f5ign1s0jluk0qilos.jpeg",
+        "alt": ""
+      },
+      {
+        "img": "/images/IMG_0706-scaled-refbqx74eqoxr0odvkdt9bqowzgmfxba1vuhky993g.jpg",
+        "alt": ""
+      },
+      {
+        "img": "/images/PHOTO-2024-07-21-01-27-37-riq3x1z96aewecp3o7nps33jd8sqffzuegi6vlem30.jpg",
+        "alt": ""
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "projects",
+    "items": [
+      {
+        "label": "20 dof humanoid hand (>)",
+        "href": "/hand/",
+        "img": "/images/IMG_3732-scaled-roebnfatzf8v19u6bh7ucyiomrnw4y9brkdwf5vdqk.jpg"
+      },
+      {
+        "label": "lysis pipette (>)",
+        "href": "/lysis-pipette/",
+        "img": "/images/IMG_0774-scaled-rfvm1sw8rmyu0xb98xzkm3kokauka092903zqfk40c.jpg"
+      },
+      {
+        "label": "fea optimized mini drone (>)",
+        "href": "/mini-drone/",
+        "img": "/images/IMG_0054-1-scaled-rhf6c2x1cvlylqd5ss6xfk11wtcoyu2cqsev0x78lo.jpg"
+      },
+      {
+        "label": "mp3 player prototype (>)",
+        "href": "/mp3-prototype/",
+        "img": "/images/IMG_2557-scaled-roe7d36ttpyyq80qj9k3gel1a6d9a2jy7o6sokphe4.jpg"
+      },
+      {
+        "label": "juno (>)",
+        "href": "/juno/",
+        "img": "/images/Juno1-rfvmd12ueec4p905osp5e9kvzzie7utn4kms3ewtos.png"
+      },
+      {
+        "label": "humanoid finger test jig (>)",
+        "href": "/humanoid-finger-torque-tester/",
+        "img": "/images/IMG_1503-scaled-rd5y9slolywmcuemiq58elfhj2g8gl16fiy1yp7ex8.jpg"
+      },
+      {
+        "label": "ashtray (>)",
+        "href": "/ashtray/",
+        "img": "/images/Ashtray1-scaled-rd606woh4fim0o0jy3mp8nklxzstfeeo9lsba4qbf0.jpg"
+      },
+      {
+        "label": "griffin (>)",
+        "href": "/griffin/",
+        "img": "/images/Stewie-ricpbhm0fbb8h8rr3e5sd8tco0w4nm56fai6sdd558.png"
+      },
+      {
+        "label": "weather and bus display (>)",
+        "href": "/weather-and-bus-station/",
+        "img": "/images/Weather_Station_5-re34duqqqgbh49ung1up87huihrzsnnd2nyr9sdqoc.png"
+      },
+      {
+        "label": "forearm v3 (>)",
+        "href": "/reality-labs-humanoid-arm/",
+        "img": "/images/Arm_BLDC-v7-1-ricmw0qogbko3jtnul1lcbf6n80idkwdqd1l3f205o.png"
+      },
+      {
+        "label": "pet feeder (>)",
+        "href": "/pet-feeder/",
+        "img": "/images/IMG_1610-scaled-e1760566336483-rd9heinpbo3gdegjo1g7yoart8d15ob4c7ep6r92ks.jpg"
+      },
+      {
+        "label": "aluminum wallet (>)",
+        "href": "/aluminum-wallet/",
+        "img": "/images/Wallet2-rdwf4bodh0hen02fu6ltugyvodnb67p59aa29gi3ws.png"
+      }
+    ]
+  }
+}

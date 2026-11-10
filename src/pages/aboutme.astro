@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import site from '../data/site.json';
+
+const { about } = site;
+---
+<Base theme="black" title="About Me">
+  <PageHeader title={about.title} back="/" />
+  <main id="content" class="about">
+    <div class="about__text">
+      {about.paragraphs.map((p) => <p>{p}</p>)}
+    </div>
+    <div class="about__grid">
+      {about.images.map((i) => <img src={i.img} alt={i.alt} loading="lazy" decoding="async" />)}
+    </div>
+  </main>
+</Base>

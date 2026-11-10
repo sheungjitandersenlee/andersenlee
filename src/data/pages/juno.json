@@ -1,0 +1,51 @@
+{
+  "title": "Juno",
+  "theme": "light",
+  "heading": "juno",
+  "date": "nov 2025 – dec 2025",
+  "back": "/projects/",
+  "intro": {
+    "img": "/images/web/Screenshot-2025-12-05-070055-e1764936136860.webp",
+    "alt": "Screenshot 2025-12-05 070055",
+    "ar": 1,
+    "html": "<p>* <em>In accordance with Triton Genomics' confidentiality policy, I will only disclose limited images with minimal detail of projects. Numerical data is redacted.</em></p><p>designed juno, an integrated DNA sequencing &amp; library preparation platform.</p><p>lead the full mechanical design cycle: from CAD, DFM, and prototyping, including:</p><p>&gt; The cartridge docking area with alignment geometry</p><p>&gt; The LCD panel housing and front bezel</p><p>&gt; interlocking internal plates to support PCBs, displays, and subsystem modules</p><p>design ensures everything fits in a compact frame&nbsp;that withstands rugged special forces use.</p>",
+    "rows": [
+      [
+        {
+          "img": "/images/web/Juno3.webp",
+          "alt": "Juno3",
+          "ar": 1.5,
+          "source": "/images/full/Juno3.png"
+        },
+        {
+          "img": "/images/web/IMG_1019.webp",
+          "alt": "IMG_1019",
+          "ar": 1.493,
+          "source": "/images/full/IMG_1019.png"
+        },
+        {
+          "img": "/images/web/IMG_1153.webp",
+          "alt": "IMG_1153",
+          "ar": 1.571,
+          "source": "/images/full/IMG_1153.png"
+        }
+      ]
+    ],
+    "source": "/images/full/Screenshot-2025-12-05-070055-e1764936136860.png"
+  },
+  "sections": [
+    {
+      "html": "<p>&gt; This portable sequencing workstation served as an early prototype for Juno.</p><p>&gt; used to test enclosure concepts, component integration, and power/interface management with the oxford nanopore MinION device.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_1040-scaled.webp",
+            "alt": "IMG_1040",
+            "ar": 1.333,
+            "source": "/images/full/IMG_1040-scaled.png"
+          }
+        ]
+      ]
+    }
+  ]
+}

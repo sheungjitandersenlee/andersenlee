@@ -1,0 +1,38 @@
+{
+  "title": "Aluminum Wallet",
+  "theme": "light",
+  "heading": "aluminum wallet",
+  "date": "oct 2025",
+  "back": "/projects/",
+  "intro": {
+    "img": "/images/web/Wallet2-Camera-2-crop1-0.5-0.5.webp",
+    "alt": "Wallet2-Camera 2",
+    "ar": 1,
+    "html": "<p>Designed a machinable aluminum wallet featuring a shoulder screw pivot hinge mechanism for compact card access.</p><p>&gt; Optimized component geometry for 3-axis CNC machining with 2° draft angles, 3 mm tool radius, and chamfered edges to eliminate sharp burrs.</p><p>&gt; Achieved a tolerance of ±0.05 mm across mating parts, ensuring friction-fit stability without fasteners.</p>",
+    "rows": [
+      [
+        {
+          "img": "/images/web/IMG_0762-scaled.webp",
+          "alt": "IMG_0762",
+          "ar": 0.75,
+          "source": "/images/full/IMG_0762-scaled.jpg"
+        },
+        {
+          "img": "/images/web/Mid-2-v4-e1761703286314.webp",
+          "alt": "Mid 2 v4",
+          "ar": 1.909,
+          "source": "/images/full/Mid-2-v4-e1761703286314.png"
+        }
+      ]
+    ],
+    "source": "/images/full/Wallet2-Camera-2.png",
+    "crop": {
+      "ar": 1,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "sections": []
+}

@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+
+const { home } = site;
+const bg = `--bg-desktop:url('${home.background.desktop}');--bg-mobile:url('${home.background.mobile}')`;
+---
+<Base theme="home">
+  <main id="content" class="home" style={bg}>
+    <div class="home__identity">
+      {home.identity.map((line) => <h2>{line}</h2>)}
+    </div>
+
+    <div class="home__experience">
+      {home.experience.map((e) => {
+        // "sep 2022 > aug 2024" -> start, >, end in their own columns
+        const [start, end = ''] = e.dates.split(/\s*>\s*/);
+        return (
+          <>
+            <a href={e.href}>{e.name}</a>
+            <a href={e.href} class="home__dates">
+              <span>{start}</span>
+              <span>&gt;</span>
+              <span>{end}</span>
+            </a>
+          </>
+        );
+      })}
+    </div>
+
+    <nav class="home__links">
+      {home.links.map((l) => (
+        <a
+          href={l.href}
+          {...(l.external ? { target: '_blank', rel: 'noopener' } : {})}
+        >
+          <span>{l.label}</span>
+          <span>(>)</span>
+        </a>
+      ))}
+    </nav>
+
+    <p class="home__caption">{home.caption}</p>
+  </main>
+</Base>

@@ -1,0 +1,33 @@
+{
+  "title": "UW Reality Labs",
+  "theme": "purple",
+  "heading": "uw reality labs, watonomous; lead mechanical design",
+  "date": "oct 2024 >",
+  "back": "/",
+  "intro": {
+    "html": "<p>&gt; Leading mechanical design for a 20 DOF tendon-driven robotic hand built for hand-tracking teleoperation. The system is being developed in collaboration between Watonomous and Waterloo Reality Labs. Watonomous brings autonomy software, Reality Labs bringing hand-tracking hardware.</p><p>&gt; Leading an 8 member team across mechanical, electrical, and software subteams. Ran design reviews, enforced DFM principles, and guided tolerance stackup analysis. Also supervising 2 co-op students on the next iteration, transitioning the actuation system from BLDC motors to linear actuators.</p><p>&gt; On the mechanical side: iterated the forearm housing for PCB and gimbals integration, improving joint torque by 9% while cutting assembly parts from 20 to 16. Identified a thermal failure mode in the PLA prototype: motor temps exceeding 70°C during sustained testing, and redesigned to CNC 6061-T6 aluminum fins.</p>",
+    "rows": [
+      [
+        {
+          "img": "/images/web/IMG_1503-scaled.webp",
+          "alt": "IMG_1503",
+          "ar": 0.75,
+          "source": "/images/full/IMG_1503-scaled.jpg"
+        },
+        {
+          "img": "/images/web/IMG_1524-scaled.webp",
+          "alt": "IMG_1524",
+          "ar": 0.75,
+          "source": "/images/full/IMG_1524-scaled.jpg"
+        },
+        {
+          "img": "/images/web/IMG_3488-scaled.webp",
+          "alt": "IMG_3488",
+          "ar": 1.333,
+          "source": "/images/full/IMG_3488-scaled.jpg"
+        }
+      ]
+    ]
+  },
+  "sections": []
+}

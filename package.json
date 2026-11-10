@@ -1,0 +1,20 @@
+{
+  "name": "andersenlee-site",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "fetch-images": "node scripts/fetch-images.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.4.7"
+  },
+  "devDependencies": {
+    "image-size": "^2.1.0",
+    "playwright": "^1.65.0",
+    "sharp": "^0.35.5"
+  }
+}

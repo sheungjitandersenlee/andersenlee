@@ -1,0 +1,32 @@
+{
+  "title": "Reality labs Humanoid Arm",
+  "theme": "light",
+  "heading": "reality labs humanoid arm",
+  "date": "jun 2025 > sep 2025",
+  "back": "/projects/",
+  "intro": {
+    "img": "/images/web/Arm_BLDC-v8.webp",
+    "alt": "Arm_BLDC v8",
+    "ar": 1,
+    "html": "<p>Designed a modular humanoid forearm housing for tendon-driven robotic fingers, integrating compact pulley assemblies, removable enclosures, and magnetic aesthetic panels for rapid maintenance and prototyping.</p>",
+    "source": "/images/full/Arm_BLDC-v8.png"
+  },
+  "sections": [
+    {
+      "html": "<p>&gt; Designed dual pulley modules mounted back-to-back inside sliding fin assemblies, enabling quick removal for re-threading or finger actuation testing.</p><p>&gt; Added magnetically attached exterior plates.</p><p>&gt; Modeled the mechanical interfaces between the forearm, wrist, and servo assemblies, designing for proper torque transmission and alignment under load.</p><p>&gt; Modeled in Fusion 360 and applied DFM/DFA principles to simplify 3D-printing tolerances for the tendon routing components.</p>"
+    },
+    {
+      "html": "<p>&gt; Used ±0.2 mm tolerance zones for consistent motion across multiple 3D-printed parts.</p><p>&gt; Ran torsional FEA applying counter-rotation at forearm ends; optimized rib geometry reduced peak stress 38% and angular deflection to 0.7°.</p><p>&gt; Enabled full finger actuation cycles up to 20 N fingertip force.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/full/Watonomous_Humanoid_V0.5.gif",
+            "alt": "",
+            "ar": 1.596,
+            "source": "/images/full/Watonomous_Humanoid_V0.5.gif"
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+---
+// The one template for every project and experience page:
+//
+//   header   title, date, back link
+//   intro    hero image (4 cols, optional) + summary text (6 cols)
+//   sections each: optional label, text, then justified image rows
+//
+// Page JSON (src/data/pages/<slug>.json):
+// {
+//   "title", "theme", "heading", "date", "back", "size"?: "large", "spacing"?: "even",
+//   "intro":    { "img"|"video"?, "alt"?, "ar"?, "html", "rows"? },
+//   "sections": [ { "close"?, "label"?, "html"?, "cols"?, "rows"?: [ [ { "img"|"video", "alt"?, "ar", "box"?, "crop"?, "auto"? }, ... ] ] } ]
+// }
+//
+// All spacing lives in global.css (.project rules). "ar" values are written by
+// scripts/aspect.mjs from the real files; run it after adding media.
+import PageHeader from './PageHeader.astro';
+import Media from './Media.astro';
+
+interface Props { page: any }
+const { page } = Astro.props;
+const { intro, sections = [] } = page;
+const hasHero = intro && (intro.img || intro.video);
+
+// Justified rows: each item grows in proportion to its aspect ratio, so
+// images side by side are the same height. Rows are --row-h tall
+// (global.css). When a section stacks several rows, they all get the same
+// width (--rows-w) so stacked images line up on both edges: the widest
+// width at which no row is taller than --row-h.
+// A section can set "cols" (4, 6 or 8) to cap its rows narrower than the
+// full 12 columns. An item's "box" replaces its ratio for layout.
+const sum = (row: any[]) => row.reduce((s, i) => s + (i.box ?? i.ar), 0);
+const rowStyle = (row: any[]) => `--sum:${sum(row)};--n:${row.length}`;
+const sectionStyle = (rows: any[][] = [], cols?: number) => {
+  const s = cols ? [`--cols:${cols}`] : [];
+  // Images all one shape (e.g. all square) already line up as a grid at the
+  // same height, so rows keep their own width instead of shrinking to match.
+  const shapes = new Set(rows.flat().map((i) => (i.box ?? i.ar).toFixed(2)));
+  if (rows.length > 1 && shapes.size > 1)
+    s.push(`--rows-w:min(${rows
+      .map((r) => `calc(var(--row-h) * ${sum(r)} + ${r.length - 1} * var(--s-s))`)
+      .join(', ')})`);
+  return s.join(';');
+};
+---
+<div class={['project', page.size === 'large' && 'project--large', page.size === 'xl' && 'project--xl',page.spacing === 'even' && 'project--even'].filter(Boolean).join(' ')}>
+  <PageHeader title={page.heading} back={page.back} date={page.date} />
+
+  <main id="content" class="project__body">
+    {intro && (
+      <section class={`project__section${hasHero ? ' project__section--intro' : ''}`}>
+        <div class={`project__intro${hasHero ? '' : ' project__intro--text'}`}>
+          {hasHero && <Media item={intro} class="project__hero" />}
+          <div class="project__text project__intro-text" set:html={intro.html} />
+        </div>
+        {intro.rows?.length > 0 && (
+          <div class="project__rows" style={sectionStyle(intro.rows)}>
+            {intro.rows.map((row: any[]) => (
+              <div class="project__row" style={rowStyle(row)}>
+                {row.map((item) => <Media item={item} class="project__item" />)}
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+    )}
+
+    {sections.map((s: any) => (
+      <section class={`project__section${s.close ? ' project__section--close' : ''}`}>
+        {(s.label || s.html) && (
+          <div class="project__text">
+            {s.label && <p class="project__label">{s.label}</p>}
+            {s.html && <Fragment set:html={s.html} />}
+          </div>
+        )}
+        {s.rows?.length > 0 && (
+          <div class="project__rows" style={sectionStyle(s.rows, s.cols)}>
+            {s.rows.map((row: any[]) => (
+              <div class="project__row" style={rowStyle(row)}>
+                {row.map((item) => <Media item={item} class="project__item" />)}
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+    ))}
+  </main>
+</div>

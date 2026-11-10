@@ -1,0 +1,361 @@
+/* ==========================================================================
+   Design tokens. Change spacing and colors here and it applies site-wide.
+   ========================================================================== */
+:root {
+  /* ── Spacing scale ──────────────────────────────────────────────────────
+     Only these values may be used for margins, gaps, and padding.          */
+  --s-xs:  5px;
+  --s-s:   15px;
+  --s-m:   30px;
+  --s-l:   60px;
+  --s-xl:  120px;
+  --s-2xl: 170px;
+
+  /* ── Type ───────────────────────────────────────────────────────────────
+     One style for everything. Typeface is Geist, set once on body
+     below and loaded from Google Fonts in Base.astro.                      */
+  --font-size:   14px;
+  --font-weight: 300;
+  --lh:          20px;
+  --ls:          0.1em;
+
+  /* paragraph gap on the about page (project pages use --s-xs) */
+  --p-gap:   var(--s-s);
+
+  /* ── Colors ─────────────────────────────────────────────────────────────*/
+  --ink:        #0a0022;    /* text on white project pages */
+  --white:      #ffffff;
+  --black:      #000000;
+  --text-muted: #636363;    /* dates, labels, credits (light bg) */
+
+  /* ── Page gutters ──────────────────────────────────────────────────────
+     --gutter-left is where "andersen lee" sits on the home page; every
+     page's title and left-aligned content start there.                    */
+  --gutter-left:  53px;
+  --gutter-right: 60px;
+
+  /* ── Header on inner pages ──────────────────────────────────────────── */
+  /* Puts the first line of every page title at the same height as
+     "andersen lee" on home (home lines are --home-lh tall, titles --lh). */
+  --header-top:    round(down, calc(var(--home-top) + (var(--home-lh) - var(--lh)) / 2), 1px);
+  --header-gap:    12px;
+  --header-bottom: 18px;
+
+  /* ── Home page ──────────────────────────────────────────────────────── */
+  --home-top:         75px;
+  --home-section-gap: 95px;
+  --home-caption-gap: 278px;
+  --home-lh:          27.5px;   /* one line spacing for identity, experience, links */
+  --home-date-col:    179px;
+
+  /* ── About + portfolio ──────────────────────────────────────────────── */
+  --grid-gap:          20px;
+  --portfolio-row-gap: 35px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --home-caption-gap: 128px;
+    --home-date-col: 38%;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter-left:  13px;
+    --gutter-right: 16px;
+    --home-top:     45px;
+    --home-section-gap: 55px;
+    --home-caption-gap: 128px;
+    --home-date-col: calc(47% + 6px);
+  }
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--lh);
+  letter-spacing: var(--ls);
+  text-transform: lowercase;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.theme-purple { background: var(--white);  color: var(--black); }
+body.theme-light  { background: var(--white);  color: var(--ink); }
+body.theme-black  { background: var(--black);  color: var(--white); }
+body.theme-home   { background: var(--black);  color: var(--white); }
+
+a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.75; }
+
+h1, h2, p, figure { margin: 0; font: inherit; }
+strong, b { font-weight: 500; }
+img, video { display: block; max-width: 100%; }
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+}
+.skip-link:focus { left: 0; background: #fff; color: #0073aa; padding: 0.75em 1.5em; z-index: 10; }
+
+/* ==========================================================================
+   Inner page header: title on the left, (< back) on the right, date below
+   ========================================================================== */
+.page-header {
+  /* (< back) sits as far from the right edge as the title from the left */
+  padding: var(--header-top) var(--gutter-left) var(--header-bottom);
+}
+.page-header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  line-height: var(--lh);
+}
+.page-header__back { flex: none; }
+.page-header__date {
+  margin-top: var(--header-gap);
+  line-height: var(--lh);
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Home
+   ========================================================================== */
+.home {
+  min-height: 100dvh;
+  background-color: var(--black);
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 50%),
+    var(--bg-desktop);
+  /* Painting is pinned to the left edge so it always covers the screen (no
+     black gap). It is sized to 100% of the page width. 175vh keeps it at
+     least 140% of the screen height (1.24 aspect) on narrow/tall windows. */
+  background-size: 100% 100%, max(100%, 175vh) auto;
+  background-position: 0 0, left top;
+  background-repeat: no-repeat, no-repeat;
+  padding: var(--home-top) 50px 0 var(--gutter-left);
+  overflow: hidden;
+}
+@media (max-width: 1024px) {
+  .home__caption { margin-left: calc(-1 * var(--gutter-left)); }
+}
+@media (max-width: 767px) {
+  .home {
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 60%),
+      var(--bg-mobile);
+    background-size: 100% 100%, cover;
+    background-position: 0 0, 70% top;
+    padding-left: var(--gutter-left);
+    padding-right: 0;
+  }
+  .home__caption { margin-left: calc(-1 * var(--gutter-left)); }
+}
+
+.home__identity,
+.home__experience,
+.home__links { line-height: var(--home-lh); }
+
+.home__experience {
+  display: grid;
+  /* name | start date | > | end date. The date columns are content-sized
+     and shared by every row, so the starts, arrows and ends line up. */
+  grid-template-columns: var(--home-date-col) max-content max-content max-content;
+  margin-top: var(--home-section-gap);
+}
+/* Links hug their text instead of stretching across the column. */
+.home__experience a { justify-self: start; }
+.home__experience .home__dates {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 2 / -1;
+  justify-self: stretch;
+  column-gap: var(--s-xs);
+}
+
+.home__links {
+  display: grid;
+  /* Content-sized columns so each link ends at its (>) instead of
+     stretching to the right edge of the screen. */
+  grid-template-columns: max-content max-content;
+  column-gap: var(--s-s);
+  margin-top: var(--home-section-gap);
+}
+.home__links a {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+.home__caption {
+  margin-top: var(--home-caption-gap);
+  line-height: var(--lh);
+}
+
+/* ==========================================================================
+   About
+   ========================================================================== */
+.about {
+  /* Same left margin as the page header so text and images line up with it. */
+  padding: 50px var(--gutter-right) 60px var(--gutter-left);
+}
+.about__text { line-height: var(--lh); }
+.about__text p + p { margin-top: var(--p-gap); }
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 265px));
+  gap: 11px;
+  margin-top: 35px;
+}
+.about__grid img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+@media (max-width: 767px) {
+  .about { padding: 30px var(--gutter-left) 40px; }
+  .about__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ==========================================================================
+   Portfolio
+   ========================================================================== */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+  row-gap: var(--portfolio-row-gap);
+  padding: 92px 60px 50px var(--gutter-left);
+}
+.portfolio__card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.portfolio__label { display: block; margin-top: 9px; line-height: var(--lh); }
+@media (max-width: 1024px) {
+  .portfolio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .portfolio { padding: 30px var(--gutter-left) 40px; column-gap: 12px; row-gap: 24px; }
+}
+
+/* ==========================================================================
+   Project template (src/components/Project.astro)
+   One layout for every project and experience page:
+     header -> intro (hero 2 cols + text 6 cols, then photos) -> sections
+   Spacing (all from the scale, same on every page):
+     120px between the hero + text and the photos under it   --s-xl
+     100px between sections   --section-gap
+      30px between a section's text and its images   --s-m
+      15px between images and between rows   --s-s
+       5px between paragraphs   --s-xs
+   ========================================================================== */
+.project {
+  --gutter-right: var(--s-m);
+  --header-gap:   var(--s-xs);
+  --header-bottom: 0px;
+  --header-h:     180px;          /* content starts 180px from the top */
+  --row-h:        300px;          /* every image row's height on desktop */
+  --section-gap:  100px;          /* between sections (weeks); chosen, not on the scale */
+  --gap:          var(--s-s);     /* grid column gap */
+  /* --text-cols of 12 columns (6 by default), measured against the content width */
+  --text-max: calc((100% - 11 * var(--gap)) / 12 * var(--text-cols, 6) + (var(--text-cols, 6) - 1) * var(--gap));
+}
+/* "size": "large" in a page's JSON: rows 20% taller (pages of square photos) */
+.project--large { --row-h: 360px; }
+/* "size": "xl": rows for a page of a few big portrait photos (e.g. ashtray) */
+.project--xl { --row-h: 480px; }
+/* "spacing": "even": one 60px gap between the intro, its photos, every
+   section, and each section's text and images */
+.project--even { --section-gap: var(--s-l); --intro-gap: var(--s-l); --text-gap: var(--s-l); }
+/* experience pages (theme "purple"): bullets 15px apart, images 60px below
+   the text, text 10 columns wide, image rows 350px tall */
+.theme-purple .project { --para-gap: var(--s-s); --text-gap: var(--s-l); --text-cols: 10; --row-h: 350px; }
+.project .page-header { min-height: var(--header-h); }
+
+.project__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding: 0 var(--gutter-right) var(--s-xl) var(--gutter-left);
+}
+
+/* text */
+.project__text { max-width: var(--text-max); line-height: var(--lh); }
+.project__text p + p { margin-top: var(--para-gap, var(--s-xs)); }
+.project__label { color: var(--text-muted); }
+
+/* intro: hero in columns 1-2, text right beside it in columns 3-8
+   (30px from the image: the 15px column gap + 15px padding) */
+.project__intro {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  align-items: start;
+}
+.project__hero { grid-column: 1 / span 2; }
+.project__intro-text { grid-column: 3 / span 6; max-width: none; padding-left: var(--s-s); }
+.project__intro--text .project__intro-text { grid-column: 1 / span var(--text-cols, 6); padding-left: 0; }
+
+/* sections: text, then 30px, then image rows 15px apart */
+.project__section { display: flex; flex-direction: column; gap: var(--text-gap, var(--s-m)); }
+/* the intro's photos sit 120px below the hero + text */
+.project__section--intro { gap: var(--intro-gap, var(--s-xl)); }
+/* "close": true -- a follow-on to the section above: 30px below its images
+   instead of a full section gap */
+.project__section--close { margin-top: calc(var(--s-m) - var(--section-gap)); }
+/* Image rows may use the full 12 columns; a section can set --cols
+   (4, 6, 8) to cap them narrower. Declared here to pick up --cols. */
+.project__rows {
+  --rows-max: calc((100% - 11 * var(--gap)) / 12 * var(--cols, 12) + (var(--cols, 12) - 1) * var(--gap));
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-s);
+  width: var(--rows-w, auto);   /* stacked rows share one width */
+  max-width: var(--rows-max);
+}
+
+/* justified rows: every image in a row is the same height, each image's
+   width comes from its file's real aspect ratio. Every row on every page is
+   --row-h tall: the row is exactly as wide as its images need at that
+   height, unless that's wider than the column, then it shrinks to fit.
+   Never cropped, never stretched. */
+.project__row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-s);
+  max-width: calc(var(--row-h) * var(--sum) + (var(--n) - 1) * var(--s-s));
+}
+.project__item { flex: var(--ar) 1 0; min-width: 0; }
+
+.media { margin: 0; aspect-ratio: var(--ar); }
+.media img,
+.media video { display: block; width: 100%; height: 100%; }
+/* "box" items: image centred inside a box of another shape, uncropped */
+/* narrower images sit at the left of their box, so the gap to the image
+   before stays the usual 15px; wider ones are centred vertically */
+.media--contain img { object-fit: contain; object-position: left center; }
+/* a boxed video plays whole inside its box with black bars, like a player */
+.media--contain video { object-fit: contain; background: var(--black); }
+
+@media (max-width: 767px) {
+  .project {
+    --gutter-right: var(--s-s);
+    --section-gap:  var(--s-l);
+  }
+  .project .page-header { min-height: 0; }
+  .project__body { padding-top: var(--s-l); }
+  .project__text,
+  .project__rows { width: auto; max-width: none; }
+
+  .project__intro { display: flex; flex-direction: column; gap: var(--s-m); }
+  .project__intro-text { padding-left: 0; }
+
+  .project__row { flex-direction: column; max-width: none; }
+  .media--contain { aspect-ratio: auto; }
+  .media--contain img { height: auto; }
+  .project__item { flex: none; width: 100%; }
+}

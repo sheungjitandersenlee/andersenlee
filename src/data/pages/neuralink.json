@@ -1,0 +1,40 @@
+{
+  "title": "Neuralink",
+  "theme": "purple",
+  "heading": "neuralink; mechanical engineer",
+  "date": "may 2026 > aug 2026",
+  "back": "/",
+  "intro": {
+    "html": "<p>&gt; mechanical engineer on the brain interfaces team. owned the test hardware behind implant thermal safety, the systems that confirm an implant’s surface stays at a safe temperature while it runs and charges inside the body.</p><p>&gt; the core problem was hotspot detection. the test depended on the operator, gave different results from run to run, and burned ~20 weeks/year waiting on data that couldn’t be used. rebuilt it so any operator gets the same result.</p><p>&gt; wrote the spec for a new ir camera (resolution, netd, working distance, python sdk) and ran a trade study across 4 vendors. picked a camera with better pixel density at half the price of the next option. designed a quick release mount that locks it at a fixed working distance, so the implant’s position relative to the camera stays the same between tests.</p><p>&gt; the old chamber couldn’t fit the new camera or the charge volumes of future implant revisions. moved the positioning stages from the xy plane to the xz plane. that fit the larger travel, cleared the keepout zone around the charging coil, and shrank the chamber we needed. wrote the chamber requirements, picked an off the shelf incubator, and modified it in house to save 2 weeks of lead time.</p><p>&gt; consolidated the motor and sensor electronics into a self contained enclosure with a magnetic base, a din mount option, and a new breakout board with quick disconnects. it installs without unplugging anything, even while tests are running.</p><p>&gt; implants have to be painted for ir imaging because the housing material is ir translucent. manual airbrushing was slow and depended on who held the brush. designed a dip coating station to replace it.</p><p>&gt; pctfe barely bonds to anything. tested surface prep methods and landed on a vibratory tumbler with silicon carbide grit, ~$200 against $3k to $80k for corona, plasma, or laser options. one tumble preps an implant for every future coat. chose a paint that stays matte in ir at 1/10 the cost, since the better adhering enamel was ir reflective. then tuned dilution and withdrawal speed until coats dried evenly in under 80 mins.</p><p>&gt; validated against the old process. coated diameter held within ±0.05 mm at every angle. paint thickness from 0.4 to 0.6 mm had negligible effect on surface temperature. hotspot results matched across implants. hands on time dropped 85%, from 20 mins to 3 per implant.</p><p>&gt; designed modular benchtop fixtures for thermal validation: a threaded beaker collar with cable management and swap in mounts for the charger and test electronics. redesigned the saline containment lid with 3d printed parts and viton gaskets. the first evaporation test showed a 6x improvement over the molded silicone lid.</p><p>&gt; built a thermal ci fixture that runs tests in air and catches integration issues before the full validation setup gets potted.</p><p>&gt; won most valuable newbie (mvn) at neuralink lunchtime soccer</p>",
+    "rows": [
+      [
+        {
+          "img": "/images/web/5598A8A6-091B-49F7-BEFA-0D44E70ADB70-scaled.webp",
+          "alt": "5598A8A6-091B-49F7-BEFA-0D44E70ADB70",
+          "ar": 1.333,
+          "source": "/images/full/5598A8A6-091B-49F7-BEFA-0D44E70ADB70-scaled.jpg"
+        },
+        {
+          "img": "/images/web/7C6FB094-D846-4CFF-901B-F32E61654636-scaled.webp",
+          "alt": "7C6FB094-D846-4CFF-901B-F32E61654636",
+          "ar": 0.75,
+          "source": "/images/full/7C6FB094-D846-4CFF-901B-F32E61654636-scaled.jpg"
+        },
+        {
+          "img": "/images/web/mvn-crop1-0.5-0.5.webp",
+          "alt": "most valuable newbie award, neuralink lunchtime soccer",
+          "ar": 1,
+          "source": "/images/mvn.jpg",
+          "crop": {
+            "ar": 1,
+            "focus": [
+              0.5,
+              0.5
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "sections": []
+}

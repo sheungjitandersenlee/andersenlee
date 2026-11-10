@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(npm run:*)",
+      "PowerShell(npm run *)",
+      "Bash(cp src/styles/global.css __TRACKED_VAR__/global.css.bak)",
+      "Bash(python -)",
+      "PowerShell(node scripts/shot.mjs lysis-pipette 2>&1 | Select-Object -Last 4; Get-ChildItem screenshots | ForEach-Object { Rename-Item $_.FullName \\($_.Name -replace '\\\\.png$', '-before.png'\\) }; Get-ChildItem screenshots | ForEach-Object Name)",
+      "PowerShell(node scripts/shot.mjs lysis-pipette 2>&1 | Select-Object -Last 15)",
+      "PowerShell(node scripts/shot.mjs lysis-pipette 2>&1 | Select-Object -Last 5)",
+      "PowerShell(Move-Item *)",
+      "PowerShell(Copy-Item *)"
+    ]
+  }
+}

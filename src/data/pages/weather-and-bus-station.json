@@ -1,0 +1,68 @@
+{
+  "title": "Weather and Bus Display",
+  "theme": "light",
+  "heading": "weather and bus station",
+  "date": "sep 2025",
+  "back": "/projects/",
+  "intro": {
+    "img": "/images/web/Weather_Station_1-1-crop1-0.5-0.48.webp",
+    "alt": "Weather_Station_1",
+    "ar": 1,
+    "html": "<p>Designed a compact e-ink information station displaying live bus arrivals and weather updates, built for low-power operation.</p>",
+    "source": "/images/full/Weather_Station_1-1.jpg",
+    "crop": {
+      "ar": 1,
+      "focus": [
+        0.5,
+        0.48
+      ]
+    }
+  },
+  "sections": [
+    {
+      "html": "<p>&gt; Engineered an injection-moldable enclosure with proper draft angles and snap-fit alignment features for efficient mass production.</p><p>&gt; Modeled the housing in Fusion 360 with draft and accessibility analysis for future injection molding readiness.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/Weather_Station_4.jpg-1-scaled.webp",
+            "alt": "Weather_Station_4.jpg",
+            "ar": 0.75,
+            "source": "/images/full/Weather_Station_4.jpg-1-scaled.png"
+          },
+          {
+            "img": "/images/web/IMG_0392-scaled.webp",
+            "alt": "IMG_0392",
+            "ar": 1.333,
+            "source": "/images/full/IMG_0392-scaled.jpg"
+          }
+        ]
+      ]
+    },
+    {
+      "html": "<p>&gt; Designed a modular stand system with interchangeable desktop and wall-mount bases, attached via 2 mm neodymium magnets. handles up to 4 kgf of holding force for stable mounting.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/Weather_Station_6-1-e1762117619130.webp",
+            "alt": "Weather_Station_6",
+            "ar": 1.425,
+            "source": "/images/full/Weather_Station_6-1-e1762117619130.png"
+          }
+        ]
+      ]
+    },
+    {
+      "html": "<p>&gt; Integrated a 4.3-inch e-ink display, ESP32-S3 microcontroller, and 1200 mAh Li-ion battery, achieving &gt;20 days of runtime per charge with optimized firmware.</p><p>&gt; Custom UI for weather, time, and bus arrival data that refreshes every 60 seconds while consuming &lt;0.5 W average power.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/Weather_station_3-1.webp",
+            "alt": "",
+            "ar": 1.333,
+            "source": "/images/full/Weather_station_3-1.jpg"
+          }
+        ]
+      ]
+    }
+  ]
+}

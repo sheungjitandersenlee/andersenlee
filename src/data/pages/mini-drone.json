@@ -1,0 +1,187 @@
+{
+  "title": "FEA Optimized Drone",
+  "theme": "light",
+  "heading": "fea optimized mini drone",
+  "date": "dec 2025 – jan 2025",
+  "back": "/projects/",
+  "intro": {
+    "img": "/images/web/mini-drone-hero-pad1-c.webp",
+    "alt": "image",
+    "ar": 1.002,
+    "html": "<p>designed a lightweight mini-drone frame to optimize 65% weight to stiffness ratio and thermal performance using off-the-shelf electronics.</p>",
+    "source": "/images/full/mini-drone-hero.png",
+    "crop": {
+      "ar": 1,
+      "pad": true
+    }
+  },
+  "sections": [
+    {
+      "html": "<p>&gt; the primary frame of the drone was designed and iteratively refined using topology optimization to minimize mass while preserving stiffness and load paths.</p><p>&gt; the optimization cycles consisted of \"old frame &gt; topology study &gt; design new frame based off of the study.\"</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/Screenshot-2026-01-09-165528-pad1-c.webp",
+            "alt": "topology optimization study",
+            "source": "/images/full/Screenshot-2026-01-09-165528.png",
+            "crop": {
+              "ar": 1,
+              "pad": true
+            },
+            "ar": 1.103,
+            "box": 1
+          },
+          {
+            "img": "/images/web/topology2-e1767995859698-pad1-c.webp",
+            "alt": "topology optimization result",
+            "source": "/images/full/topology2-e1767995859698.png",
+            "crop": {
+              "ar": 1,
+              "pad": true
+            },
+            "ar": 1.002
+          },
+          {
+            "img": "/images/web/finalbottom-pad1-c.webp",
+            "alt": "final frame, bottom view",
+            "source": "/images/full/finalbottom.png",
+            "crop": {
+              "ar": 1,
+              "pad": true
+            },
+            "ar": 1.002
+          }
+        ]
+      ]
+    },
+    {
+      "html": "<p>&gt; Propeller blades design were based off a design researched by MIT, optimized for low noise.</p><p>&gt; Thrust was validated through CFD analysis in ANSYS Fluent to ensure required lift margins.</p><p>&gt; studies showed blades could maintain ~4N of thrust.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/Screenshot-2026-01-09-165958-e1767996108700-pad1-c.webp",
+            "alt": "Screenshot 2026-01-09 165958",
+            "ar": 1.967,
+            "source": "/images/full/Screenshot-2026-01-09-165958-e1767996108700.png",
+            "crop": {
+              "ar": 1,
+              "pad": true
+            },
+            "box": 1
+          },
+          {
+            "img": "/images/web/Screenshot-2026-01-09-165944-pad1-c.webp",
+            "alt": "Screenshot 2026-01-09 165944",
+            "ar": 1.477,
+            "source": "/images/full/Screenshot-2026-01-09-165944.png",
+            "crop": {
+              "ar": 1,
+              "pad": true
+            },
+            "box": 1
+          }
+        ],
+        [
+          {
+            "img": "/images/web/frontviewdrone-pad1-c.webp",
+            "alt": "frontviewdrone",
+            "ar": 1,
+            "source": "/images/full/frontviewdrone.png",
+            "crop": {
+              "ar": 1,
+              "pad": true
+            }
+          },
+          {
+            "img": "/images/web/topdrone-clean-pad1-c.webp",
+            "alt": "topdrone",
+            "ar": 1,
+            "source": "/images/full/topdrone-clean.png",
+            "crop": {
+              "ar": 1,
+              "pad": true
+            }
+          },
+          {
+            "img": "/images/web/iso-e1767996829352-pad1-c.webp",
+            "alt": "iso",
+            "ar": 0.998,
+            "source": "/images/full/iso-e1767996829352.png",
+            "crop": {
+              "ar": 1,
+              "pad": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "html": "<p>&gt; Compared to the Sky Viper Nano Drone, the optimized design increased hover time by about 40%, primarily due to the lower structural mass, higher propeller efficiency, and improved battery cooling.</p><p>&gt; the new frame is measured to be 3g total.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_1381-scaled-crop1-0.5-0.5.webp",
+            "alt": "IMG_1381",
+            "ar": 1,
+            "source": "/images/full/IMG_1381-scaled.jpg",
+            "crop": {
+              "ar": 1,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_1384-scaled-crop1-0.5-0.5.webp",
+            "alt": "IMG_1384",
+            "ar": 1,
+            "source": "/images/full/IMG_1384-scaled.jpg",
+            "crop": {
+              "ar": 1,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "img": "/images/web/IMG_0056-scaled-e1767996576639-crop1-0.5-0.5.webp",
+            "alt": "IMG_0056",
+            "ar": 1,
+            "source": "/images/full/IMG_0056-scaled-e1767996576639.jpg",
+            "crop": {
+              "ar": 1,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_0053-scaled-crop1-0.5-0.5.webp",
+            "alt": "IMG_0053",
+            "ar": 1,
+            "source": "/images/full/IMG_0053-scaled.jpg",
+            "crop": {
+              "ar": 1,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_0057-scaled.webp",
+            "alt": "IMG_0057",
+            "ar": 0.75,
+            "source": "/images/full/IMG_0057-scaled.jpg",
+            "box": 1
+          }
+        ]
+      ]
+    }
+  ]
+}

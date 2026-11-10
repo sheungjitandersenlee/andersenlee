@@ -1,0 +1,321 @@
+{
+  "title": "Lysis Pipette",
+  "theme": "light",
+  "heading": "lysis pipette",
+  "date": "oct 2025 – nov 2025",
+  "back": "/projects/",
+  "intro": {
+    "img": "/images/web/isometric-e1775245051290.webp",
+    "alt": "isometric",
+    "ar": 1,
+    "html": "<p>* <em>In accordance with Triton Genomics' confidentiality policy, I will only disclose limited images with minimal detail of projects. Numerical data is redacted.</em></p><p>designed a sample acquisition and lysing system for special forces field operations.</p><p>&gt; This sample acquisition and lysing system is a product for the <strong>united states department of defense,</strong> validated by the special forces.</p><p>&gt; Key Challenge: Replace $3K-8K lab equipment with &lt;$20 single-use device ready for scaled production.</p><p>&gt; it pulls in a specifically determined volume of a chemical-biological sample, then performs a chemical and mechanical process on it before dispensing it directly into a consumable cartridge for use in Triton Genomics' robotic sample preparation system.</p>",
+    "rows": [
+      [
+        {
+          "img": "/images/web/IMG_1038-scaled-crop1-0.5-0.47.webp",
+          "alt": "IMG_1038",
+          "ar": 1,
+          "source": "/images/full/IMG_1038-scaled.png",
+          "crop": {
+            "ar": 1,
+            "focus": [
+              0.5,
+              0.47
+            ]
+          }
+        },
+        {
+          "img": "/images/web/IMG_0835-scaled-crop1-0.5-0.5.webp",
+          "alt": "IMG_0835",
+          "ar": 1,
+          "source": "/images/full/IMG_0835-scaled.jpg",
+          "crop": {
+            "ar": 1,
+            "focus": [
+              0.5,
+              0.5
+            ]
+          }
+        },
+        {
+          "img": "/images/web/IMG_1096-scaled-crop1-0.5-0.47.webp",
+          "alt": "IMG_1096",
+          "ar": 1,
+          "source": "/images/full/IMG_1096-scaled.jpg",
+          "crop": {
+            "ar": 1,
+            "focus": [
+              0.5,
+              0.47
+            ]
+          }
+        }
+      ]
+    ],
+    "source": "/images/full/isometric-e1775245051290.png"
+  },
+  "sections": [
+    {
+      "label": "system overview",
+      "html": "<p>1. Mechanical lysis (details confidential)</p><p>2. Sample holdback (details confidential)</p><p>3. Injection-molded enclosure</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/front-detail-e1775248685207.webp",
+            "alt": "front detail",
+            "ar": 1,
+            "source": "/images/full/front-detail-e1775248685207.png"
+          },
+          {
+            "img": "/images/web/shell-halves-crop1-0.5-0.5.webp",
+            "alt": "shell-halves",
+            "ar": 1,
+            "source": "/images/full/shell-halves.png",
+            "crop": {
+              "ar": 1,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "label": "Week 1-2: Core Mechanisms",
+      "html": "<p>&gt; Mechanical lysis system design</p><p>&gt; Spring selection and vacuum calculations</p><p>&gt; Valve prototyping (check valve duckbill design)</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_2457-scaled-e1775243766983.webp",
+            "alt": "IMG_2457",
+            "ar": 1.164,
+            "source": "/images/full/IMG_2457-scaled-e1775243766983.jpg"
+          },
+          {
+            "img": "/images/web/Screenshot-2026-03-30-052124.webp",
+            "alt": "Screenshot 2026-03-30 052124",
+            "ar": 0.661,
+            "source": "/images/full/Screenshot-2026-03-30-052124.png"
+          },
+          {
+            "img": "/images/web/Screenshot-2026-04-01-095340.webp",
+            "alt": "",
+            "ar": 0.848,
+            "source": "/images/full/Screenshot-2026-04-01-095340.png"
+          }
+        ]
+      ]
+    },
+    {
+      "close": true,
+      "html": "<p>&gt; validation design for check valve and volume</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/Screenshot-2026-04-03-160955-e1775247033793.webp",
+            "alt": "Screenshot 2026-04-03 160955",
+            "ar": 4.386,
+            "source": "/images/full/Screenshot-2026-04-03-160955-e1775247033793.png",
+            "box": 1.84
+          },
+          {
+            "img": "/images/web/Screenshot-2026-04-03-160646-e1775246935573.webp",
+            "alt": "Screenshot 2026-04-03 160646",
+            "ar": 0.891,
+            "source": "/images/full/Screenshot-2026-04-03-160646-e1775246935573.png"
+          }
+        ]
+      ]
+    },
+    {
+      "label": "Week 3: Holdback System, Enclosure v1",
+      "html": "<p>&gt; prototype enclosure designed and shipped a functional demo to special forces operators.</p><p>&gt; designed dual chamber syringe system</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/Screenshot-2026-04-03-152246.webp",
+            "alt": "Screenshot 2026-04-03 152246",
+            "ar": 1.097,
+            "source": "/images/full/Screenshot-2026-04-03-152246.png"
+          },
+          {
+            "img": "/images/web/IMG_1146-scaled.webp",
+            "alt": "IMG_1146",
+            "ar": 1.333,
+            "source": "/images/full/IMG_1146-scaled.jpg"
+          },
+          {
+            "img": "/images/web/Screenshot-2026-03-30-173054.webp",
+            "alt": "Screenshot 2026-03-30 173054",
+            "ar": 1.033,
+            "source": "/images/full/Screenshot-2026-03-30-173054.png"
+          }
+        ]
+      ]
+    },
+    {
+      "close": true,
+      "html": "<p>&gt; designed the inverse cam mechanism inside the pipette shaft.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/Screenshot-2026-04-03-155749.webp",
+            "alt": "Screenshot 2026-04-03 155749",
+            "ar": 1.373,
+            "source": "/images/full/Screenshot-2026-04-03-155749.png"
+          },
+          {
+            "video": "/images/IMG_0847_1.mp4",
+            "auto": true,
+            "ar": 0.563
+          }
+        ]
+      ]
+    },
+    {
+      "label": "operator feedback",
+      "html": "<p>&gt; Sharp corners on the palm is uncomfortable</p><p>&gt; Index finger hole unintuitive</p><p>&gt; Shell felt a little compliant</p><p>&gt; Button accidentally pressed during operation</p><p>&gt; Surface too slippery, which meant operator needs to hold it harder while actuating</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_1053-1-scaled-crop1-0.5-0.55.webp",
+            "alt": "IMG_1053",
+            "ar": 1,
+            "source": "/images/full/IMG_1053-1-scaled.png",
+            "crop": {
+              "ar": 1,
+              "focus": [
+                0.5,
+                0.55
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_1054-scaled-crop1-0.5-0.47.webp",
+            "alt": "IMG_1054",
+            "ar": 1,
+            "source": "/images/full/IMG_1054-scaled.png",
+            "crop": {
+              "ar": 1,
+              "focus": [
+                0.5,
+                0.47
+              ]
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "label": "Week 5",
+      "html": "<p>&gt; prototyped a series of enclosure shapes to evaluate ergonomics</p><p>&gt; pipette has an added ejectable battery compartment for safe battery disposal</p><p>&gt; new toggle switch for more control over &ldquo;on/off&rdquo; state</p><p>&gt; V2 also includes a casted silicone grip on the side of the pipette.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_0021-scaled.webp",
+            "alt": "IMG_0021",
+            "ar": 1.195,
+            "source": "/images/full/IMG_0021-scaled.jpg"
+          },
+          {
+            "img": "/images/web/Screenshot-2026-04-03-154201-e1775245401472.webp",
+            "alt": "Screenshot 2026-04-03 154201",
+            "ar": 0.481,
+            "source": "/images/full/Screenshot-2026-04-03-154201-e1775245401472.png"
+          }
+        ]
+      ]
+    },
+    {
+      "close": true,
+      "rows": [
+        [
+          {
+            "img": "/images/web/back-e1775245641749.webp",
+            "alt": "back",
+            "ar": 0.489,
+            "source": "/images/full/back-e1775245641749.png"
+          },
+          {
+            "img": "/images/web/Screenshot-2026-04-03-155209.webp",
+            "alt": "Screenshot 2026-04-03 155209",
+            "ar": 1.274,
+            "source": "/images/full/Screenshot-2026-04-03-155209.png"
+          },
+          {
+            "img": "/images/web/IMG_1096-scaled.webp",
+            "alt": "IMG_1096",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1096-scaled.jpg"
+          }
+        ]
+      ]
+    },
+    {
+      "close": true,
+      "html": "<p>&gt; These are the battery ejecting door prototypes.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_1090-scaled.webp",
+            "alt": "IMG_1090",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1090-scaled.jpg"
+          },
+          {
+            "img": "/images/web/IMG_1095-scaled.webp",
+            "alt": "IMG_1095",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1095-scaled.jpg"
+          }
+        ]
+      ]
+    },
+    {
+      "close": true,
+      "html": "<p>&gt; Polycarbonate was selected because machine was already loaded. Switching materials wasn't justified.</p><p>&gt; ran Solidworks Plastics simulations to validate enclosure design.&nbsp;</p><p>&gt; Simulation showed minimal weld lines. Sink marks and fill times also within acceptable ranges.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/Screenshot-2026-03-30-183031.webp",
+            "alt": "Screenshot 2026-03-30 183031",
+            "ar": 1.472,
+            "source": "/images/full/Screenshot-2026-03-30-183031.png"
+          },
+          {
+            "img": "/images/web/Screenshot-2026-03-30-182525.webp",
+            "alt": "Screenshot 2026-03-30 182525",
+            "ar": 1.591,
+            "source": "/images/full/Screenshot-2026-03-30-182525.png"
+          }
+        ],
+        [
+          {
+            "img": "/images/web/Screenshot-2026-03-30-184530.webp",
+            "alt": "Screenshot 2026-03-30 184530",
+            "ar": 1.271,
+            "source": "/images/full/Screenshot-2026-03-30-184530.png"
+          },
+          {
+            "img": "/images/web/Screenshot-2026-03-30-184606.webp",
+            "alt": "Screenshot 2026-03-30 184606",
+            "ar": 1.385,
+            "source": "/images/full/Screenshot-2026-03-30-184606.png"
+          },
+          {
+            "img": "/images/web/Screenshot-2026-03-30-184630.webp",
+            "alt": "Screenshot 2026-03-30 184630",
+            "ar": 1.376,
+            "source": "/images/full/Screenshot-2026-03-30-184630.png"
+          }
+        ]
+      ]
+    },
+    {
+      "label": "results",
+      "html": "<p>&gt; The estimated material cost: ~$12-18. Molds estimated ~$15,000 – 25,000 (given by onsite machinist) for both shell halves, at over 1,000 units this brings enclosure cost to under $2 per unit. Reached &lt;$20 Target.</p><p>&gt; Alternative lab grade lysis equipment cost: $3,000 – 8,000 per unit, the handheld pipette reduces per deployment cost for the Department of Defense by 99%.</p><p>&gt; shot size ≤20 cm³ per half, 18.6 cm³</p><p>&gt; Materials used: polycarb, 316SS and platinum cure 60A meets ISO 10993 biocompatibility.</p>"
+    }
+  ]
+}

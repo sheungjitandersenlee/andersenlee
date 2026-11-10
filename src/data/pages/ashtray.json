@@ -1,0 +1,45 @@
+{
+  "title": "Ashtray",
+  "theme": "light",
+  "heading": "ashtray",
+  "date": "sep 2025",
+  "back": "/projects/",
+  "size": "xl",
+  "intro": {
+    "img": "/images/web/Ashtray1-1-scaled-crop1-0.5-0.52.webp",
+    "alt": "Ashtray1",
+    "ar": 1,
+    "html": "<p>Designed, modeled, and machined a compact aluminum ashtray to explore DFM principles and CNC manufacturing workflows using Waterloo's Student Machine Shop equipment.</p><p>&gt; Modeled in Fusion 360 with fillets, chamfers, and cutter-friendly geometries for CNC milling.</p><p>&gt; Applied DFM guidelines: minimized tool changes, and selected feasible end-mill radii.</p><p>&gt; Operated the CNC mill, produced the final aluminum part to ±0.1 mm tolerance.</p>",
+    "rows": [
+      [
+        {
+          "img": "/images/web/IMG_0761-scaled.webp",
+          "alt": "",
+          "ar": 0.75,
+          "source": "/images/full/IMG_0761-scaled.jpg"
+        },
+        {
+          "img": "/images/web/IMG_0500-scaled.webp",
+          "alt": "",
+          "ar": 0.75,
+          "source": "/images/full/IMG_0500-scaled.jpg"
+        },
+        {
+          "img": "/images/web/IMG_6587-1-scaled.webp",
+          "alt": "IMG_6587",
+          "ar": 0.75,
+          "source": "/images/full/IMG_6587-1-scaled.jpg"
+        }
+      ]
+    ],
+    "source": "/images/full/Ashtray1-1-scaled.jpg",
+    "crop": {
+      "ar": 1,
+      "focus": [
+        0.5,
+        0.52
+      ]
+    }
+  },
+  "sections": []
+}

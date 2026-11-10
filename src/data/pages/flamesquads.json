@@ -1,0 +1,53 @@
+{
+  "title": "Flamesquads",
+  "theme": "purple",
+  "heading": "flamesquads",
+  "date": "sep 2022 > aug 2024",
+  "back": "/",
+  "intro": {
+    "html": "<p>&gt; freelance creative work contracted through flamesquads. brand identity, graphic design, motion design, and video direction for clients across hong kong and internationally.</p><p>&gt; Created marketing and promotional videos for clients using 3ds Max, After Effects, and Premiere Pro for motion design, 3D visualization, and post-production editing.</p><p>&gt; Designed graphics for clients using Adobe Illustrator and Photoshop, creating visually cohesive assets for print, digital, and social media campaigns.</p><p>&gt; Contributed to the <em>Immersive Ink Art Experience Corner</em>, integrating motion capture and LED display systems to create an interactive calligraphy experience. Assisted in visual design and system setup to deliver a dynamic, educational art installation.</p>",
+    "rows": [
+      [
+        {
+          "img": "/images/web/moonrock-6-800x531-1.webp",
+          "alt": "moonrock-6-800x531-1",
+          "ar": 1.705,
+          "source": "/images/full/moonrock-6-800x531-1.jpg"
+        },
+        {
+          "img": "/images/web/Screenshot-2025-10-04-225356.webp",
+          "alt": "Screenshot 2025-10-04 225356",
+          "ar": 1.812,
+          "source": "/images/full/Screenshot-2025-10-04-225356.png"
+        },
+        {
+          "img": "/images/web/IMG_0375-scaled.webp",
+          "alt": "IMG_0375",
+          "ar": 1.333,
+          "source": "/images/full/IMG_0375-scaled.jpg"
+        }
+      ],
+      [
+        {
+          "img": "/images/web/Screenshot-2025-10-04-225138.webp",
+          "alt": "Screenshot 2025-10-04 225138",
+          "ar": 1.766,
+          "source": "/images/full/Screenshot-2025-10-04-225138.png"
+        },
+        {
+          "img": "/images/web/Screenshot-2025-10-04-225131.webp",
+          "alt": "Screenshot 2025-10-04 225131",
+          "ar": 1.824,
+          "source": "/images/full/Screenshot-2025-10-04-225131.png"
+        },
+        {
+          "img": "/images/web/Goose-Robotics-Banner-1.webp",
+          "alt": "Goose Robotics Banner",
+          "ar": 1.5,
+          "source": "/images/full/Goose-Robotics-Banner-1.png"
+        }
+      ]
+    ]
+  },
+  "sections": []
+}

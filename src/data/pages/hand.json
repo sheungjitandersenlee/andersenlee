@@ -1,0 +1,330 @@
+{
+  "title": "Humanoid Hand",
+  "theme": "light",
+  "heading": "humanoid hand",
+  "date": "march 2026 – ongoing",
+  "back": "/projects/",
+  "size": "large",
+  "spacing": "even",
+  "intro": {
+    "img": "/images/web/IMG_3731-scaled-crop1-0.5-0.45.webp",
+    "alt": "IMG_3731",
+    "ar": 1,
+    "html": "<p>* Built with Calim kim-wansbrough and arman Arghavani</p><p>&gt; 20 dof underactuated tendon-driven robotic hand</p><p>&gt; 13 position servos in the forearm, 5 in the hand<br>&gt; finger curl joints coupled per finger, wrist driven by two opposing tendons, mcp abduction direct driven</p><p>&gt; i owned the tendon transmission, forearm packaging, and power and electronics architecture.</p>",
+    "source": "/images/full/IMG_3731-scaled.jpg",
+    "crop": {
+      "ar": 1,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  },
+  "sections": [
+    {
+      "rows": [
+        [
+          {
+            "img": "/images/web/Hand_Assembly_V31-crop0.75-0.5-0.5.webp",
+            "alt": "Hand_Assembly_V3(1)",
+            "ar": 0.75,
+            "source": "/images/full/Hand_Assembly_V31.png",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/Hand_Assembly_V32-crop0.75-0.5-0.5.webp",
+            "alt": "Hand_Assembly_V3(2)",
+            "ar": 0.75,
+            "source": "/images/full/Hand_Assembly_V32.png",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/Hand_Assembly_V33-crop0.75-0.5-0.5.webp",
+            "alt": "Hand_Assembly_V3(3)",
+            "ar": 0.75,
+            "source": "/images/full/Hand_Assembly_V33.png",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_2969-scaled-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_2969",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2969-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_2983-scaled-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_2983",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2983-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_1103-scaled-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_1103",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1103-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "img": "/images/web/Screenshot-2026-10-16-at-18.12.54-e1792188993178-pad0.75-c.webp",
+            "alt": "Screenshot 2026-10-16 at 18.12.54",
+            "ar": 0.75,
+            "source": "/images/full/Screenshot-2026-10-16-at-18.12.54-e1792188993178.png",
+            "crop": {
+              "ar": 0.75,
+              "pad": true
+            }
+          },
+          {
+            "img": "/images/web/IMG_3052-scaled-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_3052",
+            "ar": 0.75,
+            "source": "/images/full/IMG_3052-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_3156-scaled-crop0.75-0.6-0.5.webp",
+            "alt": "IMG_3156",
+            "ar": 0.75,
+            "source": "/images/full/IMG_3156-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.6,
+                0.5
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "img": "/images/web/IMG_3160-scaled-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_3160",
+            "ar": 0.75,
+            "source": "/images/full/IMG_3160-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_3162-scaled-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_3162",
+            "ar": 0.75,
+            "source": "/images/full/IMG_3162-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_3177-1-scaled-e1778616395717-crop0.75-0.47-0.5.webp",
+            "alt": "IMG_3177",
+            "ar": 0.75,
+            "source": "/images/full/IMG_3177-1-scaled-e1778616395717.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.47,
+                0.5
+              ]
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "html": "<p>&gt; the goal is to keep each tendon's length independent of every other joint, keeping friction low, and keeping the whole hand serviceable.</p><p class=\"project__label\">ownership</p><p>&gt; everything between the servos and finger joints; spool sizing, tendon routing, servo packaging, power and electronic stack.</p><p>&gt; I also designed the forearm shells.</p><p class=\"project__label\">Architecture</p><p>&gt; Each finger couples its DIP and PIP joints and drives the MCP independently, with antagonistic tendons for flexion and extension. Abduction is driven directly by servos. Moving every actuator to the forearm keeps mass off the end of the arm and keeps motor heat out of the fingers.</p><p>&gt; The tradeoff is that every tendon now needs a long path with low friction.</p><p>* three parameters that decided transmission accuracy: path length, spool size, friction, and tendon stretch.</p><p class=\"project__label\">path length</p><p>&gt; Tendons pass through the center of each downstream joint axis, so bending one joint doesn't change the length of tendons serving other joints. Every tendon passes through its center of rotation, so wrist motion doesn't pull on the fingers.</p><p class=\"project__label\">Spool size</p><p>&gt; Each flexor needs 7 mm of tendon pull. decided to use a 10 mm spool, which covers the stroke in ~80° of the 135° of usable rotation of the MG996R. 4.8 mm of extra pull to absorb tendon stretch and pretension. At 6 V, it gives about 216 N of tendon tension at stall, at a resolution of 0.087 mm of tendon per degree.</p><p class=\"project__label\">friction</p><p>&gt; Tendon friction compounds with the total angle the tendon wraps through, following the capstan equation, T₂/T₁ = e^(μθ). A continuous <strong>PTFE</strong> tube guides each tendon from the wrist all the way to its servo, and I limited every turn along the path to under 15°.</p><p><em>&gt; Why PTFE?</em>&nbsp;PTFE has one of the lowest friction coefficients of any solid. Its static and dynamic friction are nearly equal, so the tendon slides smoothly instead of sticking and then jumping. That matters for position control at low speeds. A continuous tube also keeps the tendon off the printed parts. And it's flexible enough to follow the forearm's routing. I also considered a metal coil housing. I chose PTFE because it's smoother, cheaper, and available off the shelf.</p><p class=\"project__label\">tendon stretch</p><p><i>&gt; </i>The tendons are 0.18 mm braided PE line, which is UHMWPE fiber, rated at 20 lb (89 N). It stretches far less than regular nylon monofilament fishing wire, but over a 400 mm path it still stretches about 5 mm at a 30 N grasp load. More than the 4.8 mm of spare pull the 10 mm spool provides, so a finger loses a fraction of a mm of travel under full load. Since position error grows with load, we decided to integrate the fingertip FSRs to close the loop on force.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/BAD515C6-1374-42BE-908B-A99515240F6B-scaled-e1792190737122-crop0.75-0.45-0.5.webp",
+            "alt": "BAD515C6-1374-42BE-908B-A99515240F6B",
+            "ar": 0.75,
+            "source": "/images/full/BAD515C6-1374-42BE-908B-A99515240F6B-scaled-e1792190737122.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.45,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_3733-scaled-e1780462390168-crop0.75-0.47-0.5.webp",
+            "alt": "IMG_3733",
+            "ar": 0.75,
+            "source": "/images/full/IMG_3733-scaled-e1780462390168.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.47,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_6087-scaled-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_6087",
+            "ar": 0.75,
+            "source": "/images/full/IMG_6087-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "img": "/images/web/IMG_1345-scaled-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_1345",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1345-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_1354-scaled-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_1354",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1354-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_3734-scaled-e1792190805692-crop0.75-0.55-0.5.webp",
+            "alt": "IMG_3734",
+            "ar": 0.75,
+            "source": "/images/full/IMG_3734-scaled-e1792190805692.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.55,
+                0.5
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "img": "/images/web/IMG_3731-scaled-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_3731",
+            "ar": 0.75,
+            "source": "/images/full/IMG_3731-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_1352-scaled-e1792190677722-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_1352",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1352-scaled-e1792190677722.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          },
+          {
+            "img": "/images/web/IMG_1333-scaled-crop0.75-0.5-0.5.webp",
+            "alt": "IMG_1333",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1333-scaled.jpg",
+            "crop": {
+              "ar": 0.75,
+              "focus": [
+                0.5,
+                0.5
+              ]
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "label": "Servo packing",
+      "html": "<p><i>&gt; </i>The 13 MG996R flexor servos sit in a 2 × 6 grid in the forearm, with alternating servos flipped so neighboring spools don't collide. The grid also staggers the spools so each tendon can converge toward the wrist without breaking the 15° turn limit.</p><p><i>&gt; </i>The forearm shell is printed in PETG with M3 heat-set inserts. I chose PETG over PLA because its glass transition is around 80°C versus about 60°C for PLA, which gives more margin with 13 servos running inside an enclosure.&nbsp;</p><p class=\"project__label\">Electronics</p><p><i>&gt; </i>An STM32 drives two PCA9685 PWM boards on a shared I²C bus at addresses 0x40 and 0x41, giving 32 channels for the 18 servos.</p><p><i>&gt; </i>Each MG996R can draw about 2.5 A at stall, so 13 of them could pull over 30 A in the worst case. Instead of one large supply, two 12 to 6 V buck converters each feed one PCA9685's servo rail. I didn't parallel them, because two bucks without current sharing let one take most of the load. Separate rails give each board its own current headroom, and a stall on one board can't sag the other board's rail. Each buck is rated for 20A, covering the 18 servos on its board. Under load testing, both rails stayed stable.</p>"
+    },
+    {
+      "label": "Result",
+      "html": "<p>&gt; Mechanically complete. The electrical stack is bench validated, with all 18 channels addressable over I2C and servo rails stable under load.</p><p>&gt; In progress: closed loop grasping with the fingertip FSRs.</p><p class=\"project__label\">What I would change</p><p>&gt; Pre-stretch the line, or switch to a fiber like Vectran.</p><p>&gt; Measure friction on every routing path with a test rig before freezing the layout.</p>"
+    }
+  ]
+}

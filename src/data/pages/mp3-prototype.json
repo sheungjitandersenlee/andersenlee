@@ -1,0 +1,92 @@
+{
+  "title": "Mp3 Player Prototype",
+  "theme": "light",
+  "heading": "mp3 player prototype",
+  "date": "march 2026 – april 2026",
+  "back": "/projects/",
+  "intro": {
+    "img": "/images/web/IMG_2557-scaled-crop1-0.5-0.55.webp",
+    "alt": "IMG_2557",
+    "ar": 1,
+    "html": "<p>The goal was to build a small music player from scratch. Breadboard prototype as a working proof of concept, with a custom PCBA designed for the next iteration.</p><p>&gt;&nbsp;Built a handheld MP3 player from scratch on breadboard, integrating an ESP32, PCM5102A DAC over I2S, eInk display, microSD card, and LiPo power system into a 3d-printed enclosure.</p><p>&gt; Diagnosed and resolved a silent I2S audio failure caused by a version conflict between the ESP32 Arduino core v3.x and the audio library; fix required rolling back to core 2.0.17.</p><p>&gt; Implemented a four-screen firmware state machine in C++ for playback, library browsing, and settings, with MP3 decoding running fully in software on the ESP32.</p>",
+    "source": "/images/full/IMG_2557-scaled.jpg",
+    "crop": {
+      "ar": 1,
+      "focus": [
+        0.5,
+        0.55
+      ]
+    }
+  },
+  "sections": [
+    {
+      "label": "Circuit Layout",
+      "html": "<p>All components connect back to the ESP32, which acts as the brain. The key connections are:</p><p>&gt; Audio (I2S): BCK → GPIO22, LRCK → GPIO21, DIN → GPIO27</p><p>&gt; Display (SPI): MOSI → GPIO19, SCK → GPIO18, CS → GPIO5, DC → GPIO4, RST → GPIO16, BUSY → GPIO2</p><p>&gt; SD Card (SPI): Shares MOSI/SCK with display, separate CS pin → GPIO23</p><p>&gt; Buttons: GPIO34, 35, 36, 39 (with external 10kΩ pull-up resistors to 3.3V)</p><p>&gt; Scroll Wheel: Rotary encoder on two GPIO pins</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_2307-scaled.webp",
+            "alt": "IMG_2307",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2307-scaled.jpg"
+          },
+          {
+            "img": "/images/web/IMG_2301-scaled.webp",
+            "alt": "IMG_2301",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2301-scaled.jpg"
+          },
+          {
+            "img": "/images/web/IMG_2312-scaled.webp",
+            "alt": "IMG_2312",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2312-scaled.jpg"
+          }
+        ]
+      ]
+    },
+    {
+      "label": "Firmware",
+      "html": "<p>The firmware was written in Cpp using the Arduino framework for ESP32. It implements a state machine with four screens:</p><p>&gt; Now Playing: shows track name, artist, playback progress<br>&gt; Library: scrollable list of songs on the SD card<br>&gt; Menu: settings and options<br>&gt; Settings: volume, display brightness, etc.</p><p>MP3 decoding uses the ESP32-audioI2S library, which runs the decode entirely in software on the ESP32's dual-core processor.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_2543-scaled.webp",
+            "alt": "IMG_2543",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2543-scaled.jpg"
+          },
+          {
+            "img": "/images/web/IMG_2451-scaled.webp",
+            "alt": "IMG_2451",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2451-scaled.jpg"
+          }
+        ]
+      ]
+    },
+    {
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_2552-scaled.webp",
+            "alt": "IMG_2552",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2552-scaled.jpg"
+          },
+          {
+            "img": "/images/web/IMG_2316-scaled.webp",
+            "alt": "IMG_2316",
+            "ar": 0.75,
+            "source": "/images/full/IMG_2316-scaled.jpg"
+          },
+          {
+            "video": "/images/IMG_2544.mov",
+            "ar": 0.562,
+            "auto": false
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Pet Feeder",
+  "theme": "light",
+  "heading": "pet feeder",
+  "date": "feb 2025 > apr 2025",
+  "back": "/projects/",
+  "intro": {
+    "img": "/images/web/IMG_1610-scaled-e1760566336483-crop1-0.5-0.55.webp",
+    "alt": "IMG_1610",
+    "ar": 1,
+    "html": "<p>Designed and prototyped a timed dispensing mechanism using a spur gear system and ESP32 controled to deliver consistent portions of dry food automatically.</p>",
+    "source": "/images/full/IMG_1610-scaled-e1760566336483.jpg",
+    "crop": {
+      "ar": 1,
+      "focus": [
+        0.5,
+        0.55
+      ]
+    }
+  },
+  "sections": [
+    {
+      "html": "<p>&gt; Early iterations had torque overload on the spur gear shaft under high weight. Reinforced shaft diameter by 1.5× and optimized gear pitch profile, improving mechanical efficiency by 22% and eliminating motor stall.</p><p>&gt; Applied statistical tolerance analysis to shaft fits and part interfaces.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_1599-scaled.webp",
+            "alt": "IMG_1599",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1599-scaled.jpg"
+          },
+          {
+            "img": "/images/web/IMG_1601-scaled.webp",
+            "alt": "IMG_1601",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1601-scaled.jpg"
+          }
+        ]
+      ]
+    },
+    {
+      "html": "<p>&gt; Programmed an ESP32 in C++ to control step timing via an A4988 driver, achieving reliable actuation cycles every 0.5s per rotation step.</p><p>&gt; Integrated a rotary encoder for interval adjustment and displayed feed timing on a TM1637 4-digit interface.</p><p>&gt; Designed the housing in Fusion 360, applying DFM/DFA principles for printability and easy maintenance access.</p>",
+      "rows": [
+        [
+          {
+            "img": "/images/web/IMG_1600-scaled.webp",
+            "alt": "IMG_1600",
+            "ar": 0.75,
+            "source": "/images/full/IMG_1600-scaled.jpg"
+          },
+          {
+            "img": "/images/web/Screenshot-2025-10-15-230946.webp",
+            "alt": "Screenshot 2025-10-15 230946",
+            "ar": 1.02,
+            "source": "/images/full/Screenshot-2025-10-15-230946.png"
+          }
+        ]
+      ]
+    }
+  ]
+}

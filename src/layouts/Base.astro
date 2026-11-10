@@ -1,0 +1,49 @@
+---
+import '../styles/global.css';
+import site from '../data/site.json';
+
+interface Props {
+  title?: string;
+  theme: 'home' | 'purple' | 'light' | 'black';
+  description?: string;
+}
+
+const { title, theme, description = site.meta.description } = Astro.props;
+const fullTitle = title ? `${title}, ${site.meta.siteName}` : site.meta.title;
+const canonical = new URL(Astro.url.pathname, site.meta.url).href;
+const ogImage = new URL(site.meta.ogImage, site.meta.url).href;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{site.meta.siteName}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.meta.siteName} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href={site.meta.favicon32} sizes="32x32" />
+    <link rel="icon" href={site.meta.favicon} sizes="192x192" />
+    <link rel="apple-touch-icon" href={site.meta.favicon} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@200..600&display=swap"
+      rel="stylesheet"
+    />
+    <slot name="head" />
+  </head>
+  <body class={`theme-${theme}`}>
+    <a class="skip-link" href="#content">skip to main content</a>
+    <slot />
+  </body>
+</html>

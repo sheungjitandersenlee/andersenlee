@@ -1,0 +1,33 @@
+{
+  "title": "Triton Genomics",
+  "theme": "purple",
+  "heading": "triton genomics; mechatronics design",
+  "date": "sep 2025 > dec 2025",
+  "back": "/",
+  "intro": {
+    "html": "<p>&gt; founding member of the \"juno\" project. a fully autonomous, field deployable DNA sequencing platform built to operate outside traditional lab environments. the goal was portable genomic threat identification in harsh conditions, interfacing directly with a Nanopore sequencer.</p><p>&gt; built and validated 8 iterations of a DNA sequencing prep cartridge in 7 weeks. secured a military entity contract over established defense contractors.</p><p>&gt; the core challenge was sealing. the cartridge needed to handle airtight and pressurized reagent flow, dynamic actuation, and repeated thermal cycling without leaking. designed and cast silicone components from scratch, compression-actuated gaskets that open and seal under specific conditions, burst valves, and airtight interfaces between cartridge layers. zero leakage up to 2 bar across 400+ runs.</p><p>&gt; to validate, designed a thermal cycling test protocol spanning 20-90°C. simulating real field conditions. zero seal failures over 400 cycles.</p><p>&gt; also redesigned the cartridge geometry for injection molding. reduced part count, simplified fastening, and integrated silicone seating features directly into the mold design. result: 132% faster assembly and a path to mass production.</p>",
+    "rows": [
+      [
+        {
+          "img": "/images/web/tritontest2-scaled.webp",
+          "alt": "tritontest2",
+          "ar": 1.429,
+          "source": "/images/full/tritontest2-scaled.jpg"
+        },
+        {
+          "img": "/images/web/IMG_0725.webp",
+          "alt": "IMG_0725",
+          "ar": 1,
+          "source": "/images/full/IMG_0725.png"
+        },
+        {
+          "img": "/images/web/IMG_1115.webp",
+          "alt": "IMG_1115",
+          "ar": 0.75,
+          "source": "/images/full/IMG_1115.jpg"
+        }
+      ]
+    ]
+  },
+  "sections": []
+}
