@@ -11,6 +11,7 @@ const bg = `--bg-desktop:url('${home.background.desktop}');--bg-mobile:url('${ho
       {home.identity.map((line) => <h2>{line}</h2>)}
     </div>
 
+    <div class="home__gap" aria-hidden="true"></div>
     <div class="home__experience">
       {home.experience.map((e) => {
         // "sep 2022 > aug 2024" -> start, >, end in their own columns
@@ -28,6 +29,7 @@ const bg = `--bg-desktop:url('${home.background.desktop}');--bg-mobile:url('${ho
       })}
     </div>
 
+    <div class="home__gap" aria-hidden="true"></div>
     <nav class="home__links">
       {home.links.map((l) => (
         <a
@@ -40,6 +42,7 @@ const bg = `--bg-desktop:url('${home.background.desktop}');--bg-mobile:url('${ho
       ))}
     </nav>
 
+    <div class="home__gap home__gap--caption" aria-hidden="true"></div>
     <p class="home__caption">{home.caption}</p>
   </main>
 </Base>
