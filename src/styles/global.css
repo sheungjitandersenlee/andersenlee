@@ -131,8 +131,10 @@ img, video { display: block; max-width: 100%; }
 /* ==========================================================================
    Home
    ========================================================================== */
-.home {
-  min-height: 100dvh;
+/* The painting sits on <body>, not .home: the body background is what phone
+   browsers paint behind their status bar and toolbars, so the painting reaches
+   every edge instead of leaving black bars above and below. */
+body.theme-home {
   background-color: var(--black);
   background-image:
     linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 50%),
@@ -143,23 +145,31 @@ img, video { display: block; max-width: 100%; }
   background-size: 100% 100%, max(100%, 175vh) auto;
   background-position: 0 0, left top;
   background-repeat: no-repeat, no-repeat;
-  padding: var(--home-top) 50px 0 var(--gutter-left);
+}
+.home {
+  min-height: 100dvh;
+  /* the safe-area insets keep the text where it was, clear of the phone's
+     status bar and notch now that the page runs underneath them */
+  padding:
+    calc(var(--home-top) + env(safe-area-inset-top)) 50px
+    env(safe-area-inset-bottom) calc(var(--gutter-left) + env(safe-area-inset-left));
   overflow: hidden;
 }
 @media (max-width: 1024px) {
   .home__caption { margin-left: calc(-1 * var(--gutter-left)); }
 }
 @media (max-width: 767px) {
-  .home {
+  body.theme-home {
     background-image:
       linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 60%),
       var(--bg-mobile);
     background-size: 100% 100%, cover;
-    background-position: 0 0, 70% top;
-    padding-left: var(--gutter-left);
-    padding-right: 0;
+    /* 40% puts the two boxers in the middle of a phone screen */
+    background-position: 0 0, 40% top;
   }
-  .home__caption { margin-left: calc(-1 * var(--gutter-left)); }
+  .home { padding-right: 0; }
+  /* caption lines up with the text above it */
+  .home__caption { margin-left: 0; }
 }
 
 .home__identity,

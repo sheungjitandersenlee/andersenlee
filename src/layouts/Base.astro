@@ -6,9 +6,10 @@ interface Props {
   title?: string;
   theme: 'home' | 'purple' | 'light' | 'black';
   description?: string;
+  style?: string;
 }
 
-const { title, theme, description = site.meta.description } = Astro.props;
+const { title, theme, description = site.meta.description, style } = Astro.props;
 const fullTitle = title ? `${title}, ${site.meta.siteName}` : site.meta.title;
 const canonical = new URL(Astro.url.pathname, site.meta.url).href;
 const ogImage = new URL(site.meta.ogImage, site.meta.url).href;
@@ -17,7 +18,10 @@ const ogImage = new URL(site.meta.ogImage, site.meta.url).href;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- home: the painting runs edge to edge, under the phone's status bar and
+         browser toolbars (viewport-fit=cover); text is kept clear with
+         safe-area insets in global.css -->
+    <meta name="viewport" content={`width=device-width, initial-scale=1${theme === 'home' ? ', viewport-fit=cover' : ''}`} />
     <title>{site.meta.siteName}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -42,7 +46,7 @@ const ogImage = new URL(site.meta.ogImage, site.meta.url).href;
     />
     <slot name="head" />
   </head>
-  <body class={`theme-${theme}`}>
+  <body class={`theme-${theme}`} style={style}>
     <a class="skip-link" href="#content">skip to main content</a>
     <slot />
   </body>
