@@ -143,19 +143,9 @@
         "img": "/images/Weather_Station_5-re34duqqqgbh49ung1up87huihrzsnnd2nyr9sdqoc.png"
       },
       {
-        "label": "forearm v3 (>)",
-        "href": "/reality-labs-humanoid-arm/",
-        "img": "/images/Arm_BLDC-v7-1-ricmw0qogbko3jtnul1lcbf6n80idkwdqd1l3f205o.png"
-      },
-      {
         "label": "pet feeder (>)",
         "href": "/pet-feeder/",
         "img": "/images/IMG_1610-scaled-e1760566336483-rd9heinpbo3gdegjo1g7yoart8d15ob4c7ep6r92ks.jpg"
-      },
-      {
-        "label": "aluminum wallet (>)",
-        "href": "/aluminum-wallet/",
-        "img": "/images/Wallet2-rdwf4bodh0hen02fu6ltugyvodnb67p59aa29gi3ws.png"
       }
     ]
   }

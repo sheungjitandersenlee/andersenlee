@@ -4,15 +4,35 @@ import PageHeader from '../components/PageHeader.astro';
 import site from '../data/site.json';
 
 const { portfolio } = site;
+
+// Show the first VISIBLE projects; the rest toggle with "see all" / "hide".
+const VISIBLE = 8;
+const hasMore = portfolio.items.length > VISIBLE;
 ---
 <Base theme="black" title="Portfolio">
   <PageHeader title={portfolio.title} back="/" />
   <main id="content" class="portfolio">
-    {portfolio.items.map((p) => (
-      <a class="portfolio__card" href={p.href}>
+    {portfolio.items.map((p, i) => (
+      <a class={`portfolio__card${i >= VISIBLE ? ' portfolio__card--extra' : ''}`} href={p.href} hidden={i >= VISIBLE}>
         <img src={p.img} alt="" loading="lazy" decoding="async" />
         <span class="portfolio__label">{p.label}</span>
       </a>
     ))}
+    {hasMore && (
+      <button type="button" class="portfolio__more" id="portfolio-more"
+        aria-expanded="false" data-more={`see all (${portfolio.items.length}) (>)`}>
+        see all ({portfolio.items.length}) (&gt;)
+      </button>
+    )}
   </main>
 </Base>
+
+<script is:inline>
+  document.getElementById('portfolio-more')?.addEventListener('click', (e) => {
+    const btn = e.currentTarget;
+    const open = btn.getAttribute('aria-expanded') !== 'true';
+    document.querySelectorAll('.portfolio__card--extra').forEach((c) => { c.hidden = !open; });
+    btn.setAttribute('aria-expanded', String(open));
+    btn.textContent = open ? 'hide (<)' : btn.dataset.more;
+  });
+</script>
