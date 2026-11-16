@@ -321,9 +321,9 @@ html:has(.portfolio) { scrollbar-gutter: stable; }
 /* "spacing": "even": one 60px gap between the intro, its photos, every
    section, and each section's text and images */
 .project--even { --section-gap: var(--s-l); --intro-gap: var(--s-l); --text-gap: var(--s-l); }
-/* experience pages (theme "purple"): bullets 15px apart, images 60px below
+/* experience pages (theme "purple"): bullets 15px apart, images 120px below
    the text, text 10 columns wide, image rows 350px tall */
-.theme-purple .project { --para-gap: var(--s-s); --text-gap: var(--s-l); --text-cols: 10; --row-h: 350px; }
+.theme-purple .project { --para-gap: var(--s-s); --text-gap: var(--s-xl); --text-cols: 10; --row-h: 350px; }
 .project .page-header { min-height: var(--header-h); }
 
 .project__body {
