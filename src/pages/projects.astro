@@ -3,13 +3,14 @@ import Base from '../layouts/Base.astro';
 import PageHeader from '../components/PageHeader.astro';
 import site from '../data/site.json';
 
-const { portfolio } = site;
+const { portfolio, home } = site;
+const bg = `--bg-desktop:url('${home.background.desktop}');--bg-mobile:url('${home.background.mobile}')`;
 
 // Show the first VISIBLE projects; the rest toggle with "see all" / "hide".
 const VISIBLE = 8;
 const hasMore = portfolio.items.length > VISIBLE;
 ---
-<Base theme="black" title="Portfolio">
+<Base theme="painting" title="Portfolio" style={bg}>
   <PageHeader title={portfolio.title} back="/" />
   <main id="content" class="portfolio">
     {portfolio.items.map((p, i) => (

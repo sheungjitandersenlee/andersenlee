@@ -8,7 +8,7 @@
 
 ## Color
 - Primary text: --text. Secondary text (dates, labels, credits): --text-muted (#636363 on light, #a1a1a1 on dark).
-- Keep the existing page themes (white project pages, white experience pages with black text, black home/portfolio).
+- Keep the existing page themes: white project pages; the home page painting behind home. About me, projects, and experience pages also sit on the painting (pinned, dimmed 50% via --dim) with white text.
 - No borders, shadows, rounded corners.
 
 ## Spacing

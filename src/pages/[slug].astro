@@ -4,6 +4,7 @@
 // the format is described at the top of src/components/Project.astro.
 import Base from '../layouts/Base.astro';
 import Project from '../components/Project.astro';
+import site from '../data/site.json';
 
 export function getStaticPaths() {
   const files = import.meta.glob('../data/pages/*.json', { eager: true });
@@ -14,7 +15,12 @@ export function getStaticPaths() {
 }
 
 const { page } = Astro.props;
+// experience pages (theme "purple") sit on the home painting
+const { home } = site;
+const bg = page.theme === 'purple'
+  ? `--bg-desktop:url('${home.background.desktop}');--bg-mobile:url('${home.background.mobile}')`
+  : undefined;
 ---
-<Base theme={page.theme} title={page.title}>
+<Base theme={page.theme} title={page.title} style={bg}>
   <Project page={page} />
 </Base>

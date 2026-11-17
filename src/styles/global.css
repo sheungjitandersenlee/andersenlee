@@ -90,10 +90,39 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.theme-purple { background: var(--white);  color: var(--black); }
+/* experience pages: the home painting behind them (shares the painting rules below) */
+body.theme-purple { --text-muted: #a1a1a1; }
 body.theme-light  { background: var(--white);  color: var(--ink); }
 body.theme-black  { background: var(--black);  color: var(--white); }
 body.theme-home   { background: var(--black);  color: var(--white); }
+/* the home painting behind a page that scrolls (about me): pinned to the
+   screen on its own layer, so it stays put while the content moves */
+body.theme-painting, body.theme-purple { background: var(--black); color: var(--white); }
+body.theme-painting::before, body.theme-purple::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  /* --dim: an even dark wash over the whole painting so content reads on top */
+  --dim: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  background-image:
+    var(--dim),
+    linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 50%),
+    var(--bg-desktop);
+  background-size: 100% 100%, 100% 100%, max(100%, 175vh) auto;
+  background-position: 0 0, 0 0, left top;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  body.theme-painting::before, body.theme-purple::before {
+    background-image:
+      var(--dim),
+      linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 60%),
+      var(--bg-mobile);
+    background-size: 100% 100%, 100% 100%, cover;
+    background-position: 0 0, 0 0, 40% top;
+  }
+}
 
 a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
 a:hover { opacity: 0.75; }
