@@ -297,10 +297,7 @@ body.theme-home {
 /* hovering a card fades only its title, never the image */
 .portfolio__card:hover { opacity: 1; }
 .portfolio__card:hover .portfolio__label { opacity: 0.75; }
-.portfolio__card[hidden] { display: none; }
-/* reserve the scrollbar's space so cards don't shrink when "see all" makes the page scroll */
-html:has(.portfolio) { scrollbar-gutter: stable; }
-/* "see all" sits on its own row under the cards, in the same text style */
+.portfolio__card[hidden] { display: none; }/* "see all" sits on its own row under the cards, in the same text style */
 .portfolio__more {
   grid-column: 1 / -1;
   justify-self: start;
