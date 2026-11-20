@@ -1,0 +1,20 @@
+{
+  "title": "Matic Robots",
+  "theme": "purple",
+  "heading": "matic robots",
+  "date": "2027 >",
+  "back": "/",
+  "intro": {
+    "html": "<p>&gt; mechanical design at matic robots</p>",
+    "rows": [
+      [
+        {
+          "img": "/images/web/matic.webp",
+          "alt": "",
+          "ar": 1.915
+        }
+      ]
+    ]
+  },
+  "sections": []
+}

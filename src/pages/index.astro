@@ -16,14 +16,16 @@ const bg = `--bg-desktop:url('${home.background.desktop}');--bg-mobile:url('${ho
       {home.experience.map((e) => {
         // "sep 2022 > aug 2024" -> start, >, end in their own columns
         const [start, end = ''] = e.dates.split(/\s*>\s*/);
+        // entries without an "href" (no page yet) render as plain text
+        const Tag = e.href ? 'a' : 'span';
         return (
           <>
-            <a href={e.href}>{e.name}</a>
-            <a href={e.href} class="home__dates">
+            <Tag href={e.href}>{e.name}</Tag>
+            <Tag href={e.href} class="home__dates">
               <span>{start}</span>
               <span>&gt;</span>
               <span>{end}</span>
-            </a>
+            </Tag>
           </>
         );
       })}

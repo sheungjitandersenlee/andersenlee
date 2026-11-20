@@ -14,12 +14,16 @@
       "mobile": "/images/club_night_1982.76.1-1024x827.jpg"
     },
     "identity": [
-      "Andersen Lee",
-      "Systems Design Engineering",
-      "Physical and Mechatronics Systems Specialization",
-      "University of Waterloo"
+      "andersen lee",
+      "systems design engineering, uwaterloo",
+      "mechanical design"
     ],
     "experience": [
+      {
+        "name": "Matic Robots",
+        "dates": "2027 >",
+        "href": "/matic-robots/"
+      },
       {
         "name": "UW Reality Labs",
         "dates": "2024 >",
@@ -48,8 +52,8 @@
   "about": {
     "title": "About Me",
     "paragraphs": [
-      "i'm a systems design engineering student, interested in microfluidics, robotic systems, structures, and product design.",
-      "i like to build robots, play football, clone plants, and watch movies."
+      "hello. i’m a mechanical engineer, i mostly work on robots. i’m interested in humanoid hands, robotics structures, and wearables.",
+      "i like to play football, watch movies, work on projects, and clone plants."
     ],
     "images": [
       {
