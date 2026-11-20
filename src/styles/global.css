@@ -26,6 +26,8 @@
   --ink:        #0a0022;    /* text on white project pages */
   --white:      #ffffff;
   --black:      #000000;
+  --red:        #ff0000;    /* hover highlight on white pages */
+  --yellow:     #f0b72a;    /* hover highlight on dark pages */
   --text-muted: #636363;    /* dates, labels, credits (light bg) */
 
   /* ── Page gutters ──────────────────────────────────────────────────────
@@ -93,6 +95,10 @@ body {
 /* experience pages: the home painting behind them (shares the painting rules below) */
 body.theme-purple { --text-muted: #a1a1a1; }
 body.theme-light  { background: var(--white);  color: var(--ink); }
+
+/* hover highlight: yellow with black text on dark pages, red with white text on white pages */
+body { --hl-bg: var(--yellow); --hl-fg: var(--black); }
+body.theme-light { --hl-bg: var(--red); --hl-fg: var(--white); }
 body.theme-black  { background: var(--black);  color: var(--white); }
 body.theme-home   { background: var(--black);  color: var(--white); }
 /* the home painting behind a page that scrolls (about me): pinned to the
@@ -124,8 +130,8 @@ body.theme-painting::before, body.theme-purple::before {
   }
 }
 
-a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
-a:hover { opacity: 0.75; }
+a { color: inherit; text-decoration: none; }
+a:hover, .portfolio__more:hover { background: var(--hl-bg); color: var(--hl-fg); }
 
 h1, h2, p, figure { margin: 0; font: inherit; }
 strong, b { font-weight: 500; }
@@ -233,7 +239,7 @@ body.theme-home {
   margin-top: var(--home-section-gap);
 }
 /* Links hug their text instead of stretching across the column. */
-.home__experience a { justify-self: start; }
+.home__experience > * { justify-self: start; }
 .home__experience .home__dates {
   display: grid;
   grid-template-columns: subgrid;
@@ -293,10 +299,10 @@ body.theme-home {
   padding: 92px 60px 50px var(--gutter-left);
 }
 .portfolio__card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
-.portfolio__label { display: block; margin-top: 9px; line-height: var(--lh); transition: opacity 0.2s; }
-/* hovering a card fades only its title, never the image */
-.portfolio__card:hover { opacity: 1; }
-.portfolio__card:hover .portfolio__label { opacity: 0.75; }
+.portfolio__label { display: block; width: fit-content; margin-top: 9px; line-height: var(--lh); }
+/* hovering a card highlights only its title, never the image */
+.portfolio__card:hover { background: none; color: inherit; }
+.portfolio__card:hover .portfolio__label { background: var(--hl-bg); color: var(--hl-fg); }
 .portfolio__card[hidden] { display: none; }/* "see all" sits on its own row under the cards, in the same text style */
 .portfolio__more {
   grid-column: 1 / -1;
@@ -308,9 +314,7 @@ body.theme-home {
   font: inherit;
   letter-spacing: inherit;
   cursor: pointer;
-  transition: opacity 0.2s;
 }
-.portfolio__more:hover { opacity: 0.75; }
 @media (max-width: 1024px) {
   .portfolio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -350,6 +354,13 @@ body.theme-home {
 /* experience pages (theme "purple"): bullets 15px apart, images 120px below
    the text, text 10 columns wide, image rows 350px tall */
 .theme-purple .project { --para-gap: var(--s-s); --text-gap: var(--s-xl); --text-cols: 10; --row-h: 350px; }
+/* experience pages that fit on one screen: the images drop to the bottom,
+   as far from it as the header is from the top. Longer pages keep the
+   120px text-to-image gap and just scroll. */
+.theme-purple .project { display: flex; flex-direction: column; min-height: 100svh; }
+.theme-purple .project__body { flex: 1 0 auto; padding-bottom: var(--header-top); }
+.theme-purple .project__section:last-child { flex: 1 0 auto; }
+.theme-purple .project__section:last-child > .project__rows:last-child { margin-top: auto; }
 .project .page-header { min-height: var(--header-h); }
 
 .project__body {

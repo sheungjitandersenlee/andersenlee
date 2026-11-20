@@ -26,13 +26,6 @@
           "ar": 1.341,
           "source": "/images/full/render.png",
           "box": 1.5
-        },
-        {
-          "img": "/images/web/render2.webp",
-          "alt": "",
-          "ar": 2.011,
-          "source": "/images/full/render2.png",
-          "box": 1.5
         }
       ]
     ],
